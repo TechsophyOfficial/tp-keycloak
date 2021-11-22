@@ -15,7 +15,7 @@ spec:
         name: keycloak
     spec:
       containers:
-      - image: tsdevopsteam/platform:keycloak-11.0.2
+      - image: tsdevopsteam/platform:keycloak-$BUILD_NUMBER
         name: keycloak
         envFrom:
         - configMapRef:
