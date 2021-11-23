@@ -58,20 +58,6 @@
             justify-content: space-between;
             align-items: center;
         }
-        .icons > a {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            margin-right: 5px;
-        }
-        .links > a {
-            margin: 0;
-            padding: 0;
-            font-size: 11px;
-            text-decoration: none;
-            margin-left: 5px;
-            color: #162952;
-        }
         .copyright {
             text-align: center;
             font-size: 10px;
@@ -84,12 +70,6 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <img class="org-logo" src="https://techsophy.com/assets/images/techsophy_logo.png" alt="Techsophy" />
-    <div class="ticketHeader">
-        <p class="title">Update Password</p>
-        <img src="https://techsophy.com/assets/images/completed.png" alt="Icon" />
-    </div>
     ${kcSanitize(msg("executeActionsBodyHtml",link, linkExpiration, realmName, requiredActionsText,
     linkExpirationFormatter(linkExpiration)))?no_esc}
 <div class="ticketFooter">
