@@ -41,10 +41,6 @@
             margin-top: 10px;
             margin-bottom: 16px;
         }
-        .ticketStatus {
-            font-weight: 600;
-            color: #0077b7;
-        }
         .ticketBody {
             background-color: #fdfcfa;
             padding: 60px 20px 30px 20px;
@@ -53,15 +49,6 @@
             font-size: 13px;
             margin-bottom: 15px;
             color: #162952;
-        }
-        .infoKey{
-            font-size: 13px;
-            color: #162952;
-        }
-        .infoValue {
-            font-size: 14px;
-            margin-left: 10px;
-            font-weight: 600;
         }
         .ticketFooter {
             height: 40px;
@@ -94,21 +81,10 @@
             display: block;
             margin: auto;
         }
-        .table {
-            display: table;
-            margin: auto;
-            border-spacing: 10px;
-        }
-        .row {
-            display:table-row;
-        }
-        .cell {
-            display:table-cell;
-        }
     </style>
 </head>
 <body>
 ${kcSanitize(msg("executeActionsBodyHtml",link, linkExpiration, realmName, requiredActionsText,
-linkExpirationFormatter(linkExpiration),user.getFirstName()))?no_esc}
+linkExpirationFormatter(linkExpiration), user.getFirstName()))?no_esc}
 </body>
 </html>
