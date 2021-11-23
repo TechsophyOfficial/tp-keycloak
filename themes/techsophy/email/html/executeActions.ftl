@@ -73,7 +73,7 @@
         <img src="https://techsophy.com/assets/images/completed.png" alt="Icon" />
     </div>
     ${kcSanitize(msg("executeActionsBodyHtml",link, linkExpiration, realmName, requiredActionsText,
-    linkExpirationFormatter(linkExpiration),user.getFirstName()))?no_esc}
+    linkExpirationFormatter(linkExpiration)))?no_esc}
     <div class="ticketFooter">
         <div class="icons">
             <a href="https://www.linkedin.com/company/techsophy" target="_blank" >
