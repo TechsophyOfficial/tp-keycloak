@@ -1,0 +1,40 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: keycloak
+  template:
+    metadata:
+      labels:
+        name: keycloak
+    spec:
+      containers:
+      - image: tsdevopsteam/platform:keycloak-$BUILD_NUMBER
+        name: keycloak
+        envFrom:
+        - configMapRef:
+            name: keycloak-env
+        ports:
+         - containerPort: 8080
+      imagePullSecrets:
+      - name: ts-platform
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: keycloak
+  namespace: dev
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080
+  selector:
+    name: keycloak
