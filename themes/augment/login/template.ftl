@@ -119,7 +119,7 @@
        <input tabindex="4" class="btn btn-primary btn-block btn-lg" name="login"  onclick="window.location.href=`${properties.kcAugmentLink}`" value="Know More">
     </div>
 </div>
-<div class="col-md-6 full-height">
+<div class="col-md-6 full-height login-wrap">
   <div class="${properties.kcLoginClass!}" >
     <div id="kc-header" class="${properties.kcHeaderClass!}">
       <div id="kc-header-wrapper" class="${properties.kcHeaderWrapperClass!}"></div>
