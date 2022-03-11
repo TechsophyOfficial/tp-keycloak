@@ -37,6 +37,7 @@
 </head>
 
 <body class="${properties.kcBodyClass!}">
+<div id="body-wrapper">
 <div class="col-md-6 full-height welcome">
     <div class="welcome-page-section">
         <div class="welcome-text">
@@ -83,22 +84,8 @@
             </div>
         </div>
 
-         <div class="row">
-          <div class="col-md-6">
-                    <div class="welcome-page-card">
-                        <span>
-                           <svg width="34" height="38" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.44444 7.6C8.40124 7.6 7.55556 8.45066 7.55556 9.5C7.55556 10.5493 8.40124 11.4 9.44444 11.4H24.5556C25.5988 11.4 26.4444 10.5493 26.4444 9.5C26.4444 8.45066 25.5988 7.6 24.5556 7.6H9.44444Z" fill="#1E202C"/>
-                                <path d="M7.55556 17.1C7.55556 16.0507 8.40124 15.2 9.44444 15.2H24.5556C25.5988 15.2 26.4444 16.0507 26.4444 17.1C26.4444 18.1493 25.5988 19 24.5556 19H9.44444C8.40124 19 7.55556 18.1493 7.55556 17.1Z" fill="#1E202C"/>
-                                <path d="M9.44444 22.8C8.40124 22.8 7.55556 23.6507 7.55556 24.7C7.55556 25.7493 8.40124 26.6 9.44444 26.6H17C18.0432 26.6 18.8889 25.7493 18.8889 24.7C18.8889 23.6507 18.0432 22.8 17 22.8H9.44444Z" fill="#1E202C"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.77778 0C1.69137 0 0 1.70132 0 3.8V34.2C0 36.2987 1.69137 38 3.77778 38H30.2222C32.3086 38 34 36.2987 34 34.2V3.8C34 1.70132 32.3086 0 30.2222 0H3.77778ZM30.2222 3.8H3.77778L3.77778 34.2H19.9508L30.2222 23.0071V3.8ZM30.2222 34.2H25.092L30.2222 28.6095V34.2Z" fill="#1E202C"/>
-                            </svg>
-                        </span>
-                        <h2>Form</h2>
-                        <h2>Modeler</h2>
-                        <p>Start creating a form without writing HTML code</p>
-                    </div>
-                </div>
+         <div style="display:none" class="row">
+        
                  <div class="col-md-6">
                     <div class="welcome-page-card" style="float : left">
                         <span>
@@ -112,7 +99,7 @@
                         <p>Depict a set of model to simplify the communications graphically</p>
                     </div>
                 </div>
-        </div>
+        </div> 
 
         <a href="#">To know more click below you will be redirected to our AUGMNT website</a>
 
@@ -230,7 +217,7 @@
     </div>
   </div>
   </div>
-
+ </div>
   <!-- Footer -->
 <footer class="page-footer font-small blue">
 
