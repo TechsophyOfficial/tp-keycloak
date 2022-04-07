@@ -41,7 +41,7 @@
 <div class="col-md-6 full-height welcome">
     <div class="welcome-page-section">
         <div class="welcome-text">
-            <h1> Welcome to AUGMENT </h1>
+            <h1> Welcome to AUGMNT </h1>
             <ul>
                 <li>3X Delivery Speed</li>
                 <li>Reusable Components</li>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="footer-text">
                     <p style="width: 100%; text-align: right">
-                        Powered by <b>AUGMENT</b>
+                        Powered by <b>AUGMNT</b>
                     </p>
                 </div>
             </div>
