@@ -71,14 +71,13 @@ type="button" onclick="location.href='${p.loginUrl}';" value="${p.displayName}"/
 </#list>
 </div>
 </#if>
-<#if realm.registrationAllowed && !registrationDisabled??>
 <div style="margin-top:50px;text-align:center">
 <span style="text-size:13px;">Don't have an account?</span>
 
 <a href="${url.registrationUrl}" style="color:#CF3438;">Sign Up Now</a>
 <div>
 </div>
-</#if>
+
 </div>
 </div>
 <div class="card-heading" style="background: url('${url.resourcesPath}/img/kims.png'); background-size: 100% 100%">
