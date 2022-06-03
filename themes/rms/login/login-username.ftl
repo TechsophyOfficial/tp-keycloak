@@ -71,6 +71,7 @@ type="button" onclick="location.href='${p.loginUrl}';" value="${p.displayName}"/
 </#list>
 </div>
 </#if>
+<#if realm.password && realm.registrationAllowed && !registrationDisabled??>
 <div style="margin-top:50px;text-align:center">
 <span style="text-size:13px;">Don't have an account?</span>
 
@@ -79,6 +80,7 @@ type="button" onclick="location.href='${p.loginUrl}';" value="${p.displayName}"/
 </div>
 
 </div>
+</#if>
 </div>
 <div class="card-heading" style="background: url('${url.resourcesPath}/img/kims.png'); background-size: 100% 100%">
 <div class="card-sample-text">
