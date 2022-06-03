@@ -14,7 +14,7 @@
                </div>
                <div class="input-group">
                   <input id="code" name="code" class="input--style-3 input-width" 
-                     aria-invalid="<#if messagesPerField.existsError('username')>true</#if>"
+
                      class="${properties.kcInputClass!}"
                      style="text-align: center"
                      placeholder="&#11044    &#11044    &#11044    &#11044    &#11044    &#11044"
