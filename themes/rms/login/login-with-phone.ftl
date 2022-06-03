@@ -47,7 +47,13 @@
                         <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
                             <input tabindex="4"
                                    class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
-                                   name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+                                   name="loginWithOTP" id="kc-login" type="submit" value="Send OTP")}"/>
+                        </div>
+
+                          <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
+                            <input tabindex="4"
+                                   class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}"
+                                   name="loginWithPassword" id="kc-login" type="submit" value="Or Enter Password"/>
                         </div>
                     </form>
                 </#if>

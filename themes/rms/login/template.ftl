@@ -39,7 +39,9 @@
 <body class="${properties.kcBodyClass!}">
 <div class="${properties.kcLoginClass!}">
     <div id="kc-header" class="${properties.kcHeaderClass!}">
-        </div>
+        <div id="kc-header-wrapper"
+             class="${properties.kcHeaderWrapperClass!}">${kcSanitize(msg("loginTitleHtml",(realm.displayNameHtml!'')))?no_esc}</div>
+    </div>
     <div class="${properties.kcFormCardClass!}">
         <header class="${properties.kcFormHeaderClass!}">
             <#if realm.internationalizationEnabled  && locale.supported?size gt 1>
@@ -78,16 +80,26 @@
                     <div class="col-md-10">
                         <#nested "show-username">
                         <div id="kc-username" class="${properties.kcFormGroupClass!}">
-                            
-                           
+                            <label id="kc-attempted-username">${auth.attemptedUsername}</label>
+                            <a id="reset-login" href="${url.loginRestartFlowUrl}">
+                                <div class="kc-login-tooltip">
+                                    <i class="${properties.kcResetFlowIcon!}"></i>
+                                    <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             <#else>
                 <#nested "show-username">
                 <div id="kc-username" class="${properties.kcFormGroupClass!}">
-                    
-                
+                    <label id="kc-attempted-username">${auth.attemptedUsername}</label>
+                    <a id="reset-login" href="${url.loginRestartFlowUrl}">
+                        <div class="kc-login-tooltip">
+                            <i class="${properties.kcResetFlowIcon!}"></i>
+                            <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
+                        </div>
+                    </a>
                 </div>
             </#if>
         </#if>
