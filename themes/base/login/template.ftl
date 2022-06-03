@@ -79,6 +79,7 @@
                     <div class="col-md-10">
                         <#nested "show-username">
                         <div class="${properties.kcFormGroupClass!}">
+                          <#--
                             <div id="kc-username">
                                 <label id="kc-attempted-username">${auth.attemptedUsername}</label>
                                 <a id="reset-login" href="${url.loginRestartFlowUrl}">
@@ -88,12 +89,14 @@
                                     </div>
                                 </a>
                             </div>
+                          -->
                         </div>
                     </div>
                 </div>
             <#else>
                 <#nested "show-username">
                 <div class="${properties.kcFormGroupClass!}">
+                  <#--
                     <div id="kc-username">
                         <label id="kc-attempted-username">${auth.attemptedUsername}</label>
                         <a id="reset-login" href="${url.loginRestartFlowUrl}">
@@ -103,6 +106,7 @@
                             </div>
                         </a>
                     </div>
+                  -->
                 </div>
             </#if>
         </#if>
