@@ -76,6 +76,7 @@
                     <div class="col-md-10">
                         <#nested "show-username">
                         <div id="kc-username" class="${properties.kcFormGroupClass!}">
+                         <#--
                             <label id="kc-attempted-username">${auth.attemptedUsername}</label>
                             <a id="reset-login" href="${url.loginRestartFlowUrl}">
                                 <div class="kc-login-tooltip">
@@ -83,12 +84,14 @@
                                     <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
                                 </div>
                             </a>
+                          -->
                         </div>
                     </div>
                 </div>
             <#else>
                 <#nested "show-username">
                 <div id="kc-username" class="${properties.kcFormGroupClass!}">
+                  <#--
                     <label id="kc-attempted-username">${auth.attemptedUsername}</label>
                     <a id="reset-login" href="${url.loginRestartFlowUrl}">
                         <div class="kc-login-tooltip">
@@ -96,6 +99,7 @@
                             <span class="kc-tooltip-text">${msg("restartLoginTooltip")}</span>
                         </div>
                     </a>
+                  -->
                 </div>
             </#if>
         </#if>
