@@ -41,7 +41,7 @@
 <div class="col-md-6 full-height welcome">
     <div class="welcome-page-section">
         <div class="welcome-text">
-            <h1> Welcome to AUGMNT </h1>
+            <h1> Welcome to AWGMENT </h1>
             <ul>
                 <li>3X Delivery Speed</li>
                 <li>Reusable Components</li>
@@ -101,7 +101,7 @@
                 </div>
         </div> 
 
-        <a href="#">To know more click below you will be redirected to our AUGMNT website</a>
+        <a href="#">To know more click below you will be redirected to our AWGMENT website</a>
 
        <input tabindex="4" class="btn btn-primary btn-block btn-lg" name="login"  onclick="window.location.href=`${properties.kcAugmentLink}`" value="Know More">
     </div>
@@ -229,7 +229,7 @@
                 </div>
                 <div class="footer-text">
                     <p style="width: 100%; text-align: right">
-                        Powered by <b>AUGMNT</b>
+                        Powered by <b>AWGMENT</b>
                     </p>
                 </div>
             </div>
