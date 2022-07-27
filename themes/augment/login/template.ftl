@@ -13,7 +13,7 @@
         </#list>
     </#if>
     <title>${msg("loginTitle",(realm.displayName!''))}</title>
-    <link rel="icon" href="${url.resourcesPath}/img/favicon.ico" />
+    <link rel="icon" href="${url.resourcesPath}/img/augment-logo.svg" />
     <#if properties.stylesCommon?has_content>
         <#list properties.stylesCommon?split(' ') as style>
             <link href="${url.resourcesCommonPath}/${style}" rel="stylesheet" />
@@ -99,11 +99,7 @@
                         <p>Depict a set of model to simplify the communications graphically</p>
                     </div>
                 </div>
-        </div> 
-
-        <a href="#">To know more click below you will be redirected to our AWGMENT website</a>
-
-       <input tabindex="4" class="btn btn-primary btn-block btn-lg" name="login"  onclick="window.location.href=`${properties.kcAugmentLink}`" value="Know More">
+        </div>
     </div>
 </div>
 <div class="col-md-6 full-height login-wrap">
