@@ -386,7 +386,7 @@ a.zocial {
 .full-height {
   /* height: calc(100vh - 60px); */
   display: flex;
-  padding-bottom: 69px;
+  padding-bottom: 150px;
 }
 
 .login-wrap {
