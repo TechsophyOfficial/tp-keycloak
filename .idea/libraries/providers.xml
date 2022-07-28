@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="providers">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/standalone/deployments/providers/apple-social-identity-provider-1.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/standalone/deployments/providers/otp-and-password-authenticator-jar-with-dependencies.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
