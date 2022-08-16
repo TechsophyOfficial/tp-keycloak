@@ -1,6 +1,6 @@
 {
-  "id": "test2",
-  "realm": "test2",
+  "id": "techsophy-platform",
+  "realm": "techsophy-platform",
   "notBefore": 0,
   "revokeRefreshToken": false,
   "refreshTokenMaxReuse": 0,
@@ -48,7 +48,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "test1",
+        "containerId": "techsophy-platform",
         "attributes": {}
       },
       {
@@ -57,7 +57,7 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "test1",
+        "containerId": "techsophy-platform",
         "attributes": {}
       }
     ],
@@ -959,7 +959,7 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/test1/account/",
+      "baseUrl": "/realms/techsophy-platform/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
@@ -970,7 +970,7 @@
         "view-profile"
       ],
       "redirectUris": [
-        "/realms/test1/account/*"
+        "/realms/techsophy-platform/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -1284,14 +1284,14 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/test1/console/",
+      "baseUrl": "/admin/techsophy-platform/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/admin/test1/console/*"
+        "/admin/techsophy-platform/console/*"
       ],
       "webOrigins": [
         "+"
