@@ -3,7 +3,7 @@
 
 awgment-keycloak
 
-## Docker build and run and test
+## Docker build and run
 docker build . -t awgment/keycloak
 
 set values in docker.env files as per your environment
