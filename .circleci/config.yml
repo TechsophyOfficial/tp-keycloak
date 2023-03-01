@@ -4,37 +4,48 @@ version: 2.1
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+workflows:
+  commit-flow:
+    # when:
+    #   not: << pipeline.git.tag >>
+    jobs:
+      - publishMS:
+          context: ossContext
+
 jobs:
 
-  releaseMS:
+  publishMS:
     docker:
       - image: cimg/openjdk:11.0.11
     steps:
       - checkout
+      - attach_workspace:
+          at: .
       - setup_remote_docker:
-          docker_layer_caching: false      
-      - run: |
-          if [[ -z "$CIRCLE_TAG" ]] ;  then exit 1; fi
-          TAG=$CIRCLE_TAG
-          echo $TS_DOCKER_PUB_PASS | docker login -u $TS_DOCKER_PUB_USR --password-stdin
-          REPONAME=$TS_DOCKER_PUB_USR/$CIRCLE_PROJECT_REPONAME
-          docker build . -t $REPONAME:$TAG
-          #docker tag $REPONAME:latest $REPONAME:$TAG
-          docker push $REPONAME:$TAG
+          docker_layer_caching: false
+      - run:
+          name: "Build docker image"
+          command: |
+            REPONAME=$TS_DOCKER_PUB_USR/$CIRCLE_PROJECT_REPONAME
+            docker build . -t $REPONAME:latest
+
+      - run:
+          name: "Push docker image"
+          command: |
+            if [[ -z "$CIRCLE_TAG" ]] ; 
+            then  if [[ "$CIRCLE_BRANCH" == "dev" ]] ; then TAG="v0.0.0-alpha"; fi 
+            else 
+              TAG=$CIRCLE_TAG; 
+            fi 
+            if [[ -z "$TAG" ]]; then exit 0; fi
+            echo $TS_DOCKER_PUB_PASS | docker login -u $TS_DOCKER_PUB_USR --password-stdin
+            REPONAME=$TS_DOCKER_PUB_USR/$CIRCLE_PROJECT_REPONAME
+            docker tag $REPONAME:latest $REPONAME:$TAG
+            docker push $REPONAME:$TAG
 
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  tagged-release:
-    jobs:
-      - releaseMS:
-          context: ossContext
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/
 
   # tagged-build:
   #   jobs:
