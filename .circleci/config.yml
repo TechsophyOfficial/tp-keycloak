@@ -11,6 +11,11 @@ workflows:
     jobs:
       - publishMS:
           context: ossContext
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only: /dev/              
 
 jobs:
 
