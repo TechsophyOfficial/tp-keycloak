@@ -278,15 +278,6 @@
       "admin-cli": [],
       "camunda-identity-service": [
         {
-          "id": "923bb67c-1158-4075-8b4d-424951223b69",
-          "name": "awgment-form-acl-create-or-update",
-          "description": "awgment-form-acl-create-or-update",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
-          "attributes": {}
-        },
-        {
           "id": "118f12b4-3a39-4fb5-8fd8-320833b3d480",
           "name": "awgment-workflow-engine-create-or-update",
           "description": "awgment-workflow-engine-create-or-update",
@@ -296,9 +287,27 @@
           "attributes": {}
         },
         {
+          "id": "9e50f33f-444d-41ce-8b7c-42b7a88f29b2",
+          "name": "awgment-account-acl-create-or-update",
+          "description": "awgment-account-acl-create-or-update",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
+          "attributes": {}
+        },
+        {
           "id": "01a5e605-167a-4437-8660-f676628d979f",
           "name": "awgment-rule-engine-create-or-update",
           "description": "awgment-rule-engine-create-or-update",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
+          "attributes": {}
+        },
+        {
+          "id": "b4ce2763-29b0-4f62-be4b-38f190a184a2",
+          "name": "awgment-form-acl-read",
+          "description": "awgment-form-acl-read",
           "composite": false,
           "clientRole": true,
           "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
@@ -377,6 +386,15 @@
           "attributes": {}
         },
         {
+          "id": "014ae0ab-e6b6-4d40-a552-0e733494e304",
+          "name": "awgment-form-acl-create-or-update",
+          "description": "awgment-form-acl-create-or-update",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
+          "attributes": {}
+        },
+        {
           "id": "f8908a52-9089-43e3-8997-b35a6f501ccd",
           "name": "awgment-rule-engine-read",
           "description": "awgment-rule-engine-read",
@@ -386,9 +404,9 @@
           "attributes": {}
         },
         {
-          "id": "45cce879-a3dd-4c56-b6c2-ab1dbdf5f5e5",
-          "name": "awgment-form-acl-all",
-          "description": "awgment-form-acl-all",
+          "id": "a4bf2477-eb46-4568-9122-ee665cafbbc1",
+          "name": "awgment-elastic-acl-all",
+          "description": "awgment-elastic-acl-all",
           "composite": false,
           "clientRole": true,
           "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
@@ -440,15 +458,6 @@
           "attributes": {}
         },
         {
-          "id": "09b2251a-6d4a-41bd-b484-3d028353ca2b",
-          "name": "awgment-acl-create-or-update",
-          "description": "awgment-acl-create-or-update",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
-          "attributes": {}
-        },
-        {
           "id": "4053ef98-c8a4-408d-a61d-3a39435f7475",
           "name": "awgment-case-inbox",
           "description": "awgment-case-inbox",
@@ -479,6 +488,15 @@
           "id": "6d5039f6-f7db-40d4-9e81-1f09d195f121",
           "name": "awgment-rule-all",
           "description": "awgment-rule-all",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
+          "attributes": {}
+        },
+        {
+          "id": "67f56258-c220-4ed5-996e-d5b929de848c",
+          "name": "awgment-elastic-acl-read",
+          "description": "awgment-elastic-acl-read",
           "composite": false,
           "clientRole": true,
           "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
@@ -530,9 +548,27 @@
           "attributes": {}
         },
         {
+          "id": "7168278f-5204-48f0-9ccf-5bdf7e98bcc8",
+          "name": "awgment-form-acl-delete",
+          "description": "awgment-form-acl-delete",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
+          "attributes": {}
+        },
+        {
           "id": "55f3cf9b-039a-49a5-9252-13c04cb7d57d",
           "name": "awgment-modeler-rule",
           "description": "awgment-modeler-rule",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
+          "attributes": {}
+        },
+        {
+          "id": "a4f9e33c-d286-4eea-8b7a-970be461d5b1",
+          "name": "awgment-account-acl-read",
+          "description": "awgment-account-acl-read",
           "composite": false,
           "clientRole": true,
           "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
@@ -602,15 +638,6 @@
           "attributes": {}
         },
         {
-          "id": "a3997423-c811-46e2-8350-fc74e971f84a",
-          "name": "awgment-acl-read",
-          "description": "awgment-acl-read",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
-          "attributes": {}
-        },
-        {
           "id": "79731b24-98aa-40cb-bf0b-08ba4769a45f",
           "name": "awgment-rule-delete",
           "description": "awgment-rule-delete",
@@ -623,15 +650,6 @@
           "id": "f0a3d5c4-03db-4e05-9bca-942fc4d15dae",
           "name": "awgment-workflow-create-or-update",
           "description": "awgment-workflow-create-or-update",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
-          "attributes": {}
-        },
-        {
-          "id": "f3c2ba5a-505a-4b5b-a87a-39b36ccc266e",
-          "name": "awgment-form-acl-delete",
-          "description": "awgment-form-acl-delete",
           "composite": false,
           "clientRole": true,
           "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
@@ -674,15 +692,6 @@
           "attributes": {}
         },
         {
-          "id": "d5bda45c-6db1-4c50-b969-217a4db41f6f",
-          "name": "awgment-form-acl-read",
-          "description": "awgment-form-acl-read",
-          "composite": false,
-          "clientRole": true,
-          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
-          "attributes": {}
-        },
-        {
           "id": "6ebccb8a-e154-4b4a-934a-910aacb7560f",
           "name": "awgment-manage-groups",
           "description": "awgment-manage-groups",
@@ -695,6 +704,24 @@
           "id": "bc956d8b-72ac-4794-84b0-b8aa250c5046",
           "name": "awgment-util-create-or-update",
           "description": "awgment-util-create-or-update",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
+          "attributes": {}
+        },
+        {
+          "id": "3d2e4a12-cd0e-4e50-9848-57bd2a223f13",
+          "name": "awgment-tsf-all",
+          "description": "awgment-tsf-all",
+          "composite": false,
+          "clientRole": true,
+          "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
+          "attributes": {}
+        },
+        {
+          "id": "d822cce9-a45f-459b-aead-b0169203f3f0",
+          "name": "awgment-form-acl-all",
+          "description": "awgment-form-acl-all",
           "composite": false,
           "clientRole": true,
           "containerId": "cf4718fe-a18a-4daa-a1e5-c3586f10065e",
@@ -806,7 +833,7 @@
   },
   "groups": [
     {
-      "id": "b0383cfa-efe1-43f9-9b1c-d3aeb8f33c28",
+      "id": "eab189d6-f527-413f-ae55-fa1315a777cd",
       "name": "camunda-admin",
       "path": "/camunda-admin",
       "attributes": {},
@@ -821,53 +848,47 @@
           "query-groups"
         ],
         "camunda-identity-service": [
-          "awgment-form-acl-create-or-update",
           "awgment-workflow-engine-create-or-update",
+          "awgment-modeler-rule",
           "awgment-rule-engine-create-or-update",
           "awgment-util-delete",
           "awgment-util-all",
+          "awgment-form-read",
+          "awgment-account-all",
           "awgment-runtime-form-create-or-update",
+          "awgment-workflow-engine-delete",
+          "awgment-ux-controller-read",
+          "awgment-account-read",
+          "awgment-ux-controller-all",
           "awgment-form-all",
           "awgment-runtime-form-read",
+          "awgment-modeler-workflow",
           "awgment-rule-engine-all",
+          "awgment-rule-delete",
           "awgment-rule-read",
+          "awgment-workflow-create-or-update",
           "awgment-manage-users",
           "awgment-rule-engine-read",
-          "awgment-form-acl-all",
+          "awgment-form-delete",
+          "awgment-workflow-delete",
+          "awgment-workflow-engine-read",
+          "awgment-account-delete",
           "awgment-form-create-or-update",
           "awgment-workflow-read",
           "awgment-manage-themes",
           "awgment-ux-controller-create-or-update",
           "awgment-runtime-form-all",
-          "awgment-acl-create-or-update",
           "awgment-case-inbox",
+          "awgment-manage-groups",
           "awgment-util-read",
           "awgment-account-create-or-update",
           "awgment-rule-all",
+          "awgment-util-create-or-update",
           "awgment-ux-controller-delete",
           "awgment-runtime-form-delete",
           "awgment-modeler-form",
           "awgment-rule-engine-delete",
           "awgment-rule-create-or-update",
-          "awgment-modeler-rule",
-          "awgment-form-read",
-          "awgment-account-all",
-          "awgment-workflow-engine-delete",
-          "awgment-ux-controller-read",
-          "awgment-account-read",
-          "awgment-ux-controller-all",
-          "awgment-modeler-workflow",
-          "awgment-rule-delete",
-          "awgment-acl-read",
-          "awgment-workflow-create-or-update",
-          "awgment-form-delete",
-          "awgment-form-acl-delete",
-          "awgment-workflow-delete",
-          "awgment-workflow-engine-read",
-          "awgment-account-delete",
-          "awgment-form-acl-read",
-          "awgment-manage-groups",
-          "awgment-util-create-or-update",
           "awgment-workflow-all",
           "awgment-worklfow-engine-create-or-update"
         ]
@@ -1011,6 +1032,16 @@
       ]
     }
   ],
+  "clientScopeMappings": {
+    "camunda-identity-service": [
+      {
+        "clientScope": "awgment",
+        "roles": [
+          "awgment-tsf-all"
+        ]
+      }
+    ]
+  },
   "clients": [
     {
       "id": "9735f8e8-6b57-452c-8d13-62433e956d01",
@@ -1202,6 +1233,9 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
+      "defaultRoles": [
+        "awgment-tsf-all"
+      ],
       "redirectUris": [
         "*"
       ],
@@ -1970,6 +2004,34 @@
           }
         }
       ]
+    },
+    {
+      "id": "18e30a69-5b6e-4a51-8582-62b02e572f40",
+      "name": "awgment",
+      "description": "awgment",
+      "protocol": "openid-connect",
+      "attributes": {
+        "include.in.token.scope": "true",
+        "display.on.consent.screen": "true",
+        "consent.screen.text": "${rolesScopeConsentText}"
+      },
+      "protocolMappers": [
+        {
+          "id": "5080bfcc-7283-4c1a-b6db-15dad3b4cdfc",
+          "name": "userId",
+          "protocol": "openid-connect",
+          "protocolMapper": "oidc-usermodel-attribute-mapper",
+          "consentRequired": false,
+          "config": {
+            "userinfo.token.claim": "true",
+            "user.attribute": "userId",
+            "id.token.claim": "true",
+            "access.token.claim": "true",
+            "claim.name": "userId",
+            "jsonType.label": "String"
+          }
+        }
+      ]
     }
   ],
   "defaultDefaultClientScopes": [
@@ -2040,14 +2102,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "saml-user-attribute-mapper",
-            "oidc-usermodel-attribute-mapper",
-            "oidc-full-name-mapper",
             "saml-role-list-mapper",
-            "saml-user-property-mapper",
+            "saml-user-attribute-mapper",
+            "oidc-address-mapper",
             "oidc-sha256-pairwise-sub-mapper",
-            "oidc-usermodel-property-mapper",
-            "oidc-address-mapper"
+            "oidc-full-name-mapper",
+            "oidc-usermodel-attribute-mapper",
+            "saml-user-property-mapper",
+            "oidc-usermodel-property-mapper"
           ]
         }
       },
@@ -2074,14 +2136,14 @@
         "subComponents": {},
         "config": {
           "allowed-protocol-mapper-types": [
-            "oidc-address-mapper",
-            "oidc-usermodel-property-mapper",
-            "oidc-full-name-mapper",
-            "saml-role-list-mapper",
-            "oidc-sha256-pairwise-sub-mapper",
-            "saml-user-attribute-mapper",
             "saml-user-property-mapper",
-            "oidc-usermodel-attribute-mapper"
+            "saml-role-list-mapper",
+            "oidc-usermodel-attribute-mapper",
+            "saml-user-attribute-mapper",
+            "oidc-full-name-mapper",
+            "oidc-address-mapper",
+            "oidc-sha256-pairwise-sub-mapper",
+            "oidc-usermodel-property-mapper"
           ]
         }
       },
@@ -2153,7 +2215,7 @@
   "supportedLocales": [],
   "authenticationFlows": [
     {
-      "id": "07c61ef5-91e6-42cd-b69a-a2e0db00af58",
+      "id": "056070f3-1140-405a-9d5b-9f5007f095d8",
       "alias": "Account verification options",
       "description": "Method with which to verity the existing account",
       "providerId": "basic-flow",
@@ -2177,7 +2239,7 @@
       ]
     },
     {
-      "id": "38ecb180-9d40-4325-8c61-e44cfdc53ba8",
+      "id": "c3f04c98-1332-421d-925e-e5da6a3ad5d1",
       "alias": "Authentication Options",
       "description": "Authentication options.",
       "providerId": "basic-flow",
@@ -2208,7 +2270,7 @@
       ]
     },
     {
-      "id": "5a585364-5da2-4d90-83e2-fcb7fe3fb7db",
+      "id": "985182bb-58c8-48ba-a6a7-5746a16af949",
       "alias": "Browser - Conditional OTP",
       "description": "Flow to determine if the OTP is required for the authentication",
       "providerId": "basic-flow",
@@ -2232,7 +2294,7 @@
       ]
     },
     {
-      "id": "90a5b839-a6e2-42d4-8049-0008efdeb417",
+      "id": "2aa4152f-928b-4124-ba6c-4b369539ade4",
       "alias": "Direct Grant - Conditional OTP",
       "description": "Flow to determine if the OTP is required for the authentication",
       "providerId": "basic-flow",
@@ -2256,7 +2318,7 @@
       ]
     },
     {
-      "id": "75a9a9c0-58c7-4ec2-8e53-e0282de923d0",
+      "id": "162a2a5e-b27e-4824-ba6c-cdd089907c64",
       "alias": "First broker login - Conditional OTP",
       "description": "Flow to determine if the OTP is required for the authentication",
       "providerId": "basic-flow",
@@ -2280,7 +2342,7 @@
       ]
     },
     {
-      "id": "8ad36d36-38c5-44e2-a41b-14cfc716f4b6",
+      "id": "37db0716-8297-43f3-8e51-9a14a5005396",
       "alias": "Handle Existing Account",
       "description": "Handle what to do if there is existing account with same email/username like authenticated identity provider",
       "providerId": "basic-flow",
@@ -2304,7 +2366,7 @@
       ]
     },
     {
-      "id": "b5dd07d2-6a54-4a8d-956f-edae32149796",
+      "id": "c00d38aa-29bf-4809-83be-9a2bb43245ed",
       "alias": "Reset - Conditional OTP",
       "description": "Flow to determine if the OTP should be reset or not. Set to REQUIRED to force.",
       "providerId": "basic-flow",
@@ -2328,7 +2390,7 @@
       ]
     },
     {
-      "id": "c867524f-7684-479b-b932-ec1a3d16c256",
+      "id": "8cf40d2c-fed5-46f2-92f8-c8df2c16f2fc",
       "alias": "User creation or linking",
       "description": "Flow for the existing/non-existing user alternatives",
       "providerId": "basic-flow",
@@ -2353,7 +2415,7 @@
       ]
     },
     {
-      "id": "91a5f39a-f5a9-47f9-ac36-13959c9cb24f",
+      "id": "ccbbd5bb-aaf0-4a37-95b7-d0e5cf55c445",
       "alias": "Verify Existing Account by Re-authentication",
       "description": "Reauthentication of existing account",
       "providerId": "basic-flow",
@@ -2377,7 +2439,7 @@
       ]
     },
     {
-      "id": "f1157981-7127-4123-a3fb-fb16831c856a",
+      "id": "3e041f15-0f90-4614-ae68-ab1d8c7382e5",
       "alias": "browser",
       "description": "browser based authentication",
       "providerId": "basic-flow",
@@ -2415,7 +2477,7 @@
       ]
     },
     {
-      "id": "e8de2e7e-2163-47f8-9480-fc11277b347a",
+      "id": "0a4d01fa-c1de-4a76-85e6-b8e8842ce1ba",
       "alias": "clients",
       "description": "Base authentication for clients",
       "providerId": "client-flow",
@@ -2453,7 +2515,7 @@
       ]
     },
     {
-      "id": "7c4d26dc-ca2b-413a-ad84-8ba03f8a1665",
+      "id": "2e21c0e5-2651-46fb-82fc-08ddd9a98114",
       "alias": "direct grant",
       "description": "OpenID Connect Resource Owner Grant",
       "providerId": "basic-flow",
@@ -2484,7 +2546,7 @@
       ]
     },
     {
-      "id": "45912a07-8bc9-4816-a9a2-935f37221715",
+      "id": "ef985ea7-312a-4589-9e02-7d3230533535",
       "alias": "docker auth",
       "description": "Used by Docker clients to authenticate against the IDP",
       "providerId": "basic-flow",
@@ -2501,7 +2563,7 @@
       ]
     },
     {
-      "id": "8ece17b7-e831-4bab-9eb7-d3d456c5c124",
+      "id": "ee8bd30a-e045-46f0-b47c-1a11be2266f6",
       "alias": "first broker login",
       "description": "Actions taken after first broker login with identity provider account, which is not yet linked to any Keycloak account",
       "providerId": "basic-flow",
@@ -2526,7 +2588,7 @@
       ]
     },
     {
-      "id": "83b12dcd-c864-45c8-b946-0267531158ed",
+      "id": "658bd69e-16bd-489a-a8d1-ccee4783f5e9",
       "alias": "forms",
       "description": "Username, password, otp and other auth forms.",
       "providerId": "basic-flow",
@@ -2550,7 +2612,7 @@
       ]
     },
     {
-      "id": "8540f77e-e5ad-4d02-aed3-2e26380c2daf",
+      "id": "9f6042a0-dd1d-4f76-b834-561c1554251f",
       "alias": "http challenge",
       "description": "An authentication flow based on challenge-response HTTP Authentication Schemes",
       "providerId": "basic-flow",
@@ -2574,7 +2636,7 @@
       ]
     },
     {
-      "id": "d9f988ca-ad66-4cab-bd96-e59641b6e2ff",
+      "id": "87f47314-184d-4502-bf6d-dc13f4e79807",
       "alias": "registration",
       "description": "registration flow",
       "providerId": "basic-flow",
@@ -2592,7 +2654,7 @@
       ]
     },
     {
-      "id": "51bcf6d9-4cc4-4b2c-9c4d-f0c377d95561",
+      "id": "4f4ac261-198b-4baf-a088-85469d99cf93",
       "alias": "registration form",
       "description": "registration form",
       "providerId": "form-flow",
@@ -2630,7 +2692,7 @@
       ]
     },
     {
-      "id": "8f806754-c6eb-4ac3-ac4f-b0b21015a877",
+      "id": "3aae1537-866a-4e8d-a58e-c3af8db7551b",
       "alias": "reset credentials",
       "description": "Reset credentials for a user if they forgot their password or something",
       "providerId": "basic-flow",
@@ -2668,7 +2730,7 @@
       ]
     },
     {
-      "id": "db50ac7e-a4b9-4e30-bd87-7ef9c6c9ec77",
+      "id": "28df3037-8b2e-4020-99c6-056267ac9294",
       "alias": "saml ecp",
       "description": "SAML ECP Profile Authentication Flow",
       "providerId": "basic-flow",
@@ -2687,14 +2749,14 @@
   ],
   "authenticatorConfig": [
     {
-      "id": "ec180647-7057-4f0c-9670-6099cacfa631",
+      "id": "c639c736-032e-46ea-9ffd-93448a22cbb1",
       "alias": "create unique user config",
       "config": {
         "require.password.update.after.registration": "false"
       }
     },
     {
-      "id": "28b2a129-1678-4e3e-9a80-353b78ff465e",
+      "id": "06ca4fa3-b98d-402f-8128-20d3a1894060",
       "alias": "review profile config",
       "config": {
         "update.profile.on.first.login": "missing"
