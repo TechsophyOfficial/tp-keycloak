@@ -23,10 +23,10 @@
             overflow-y: hidden;">
               	<#nested "header">
 		<div class="box1">
-        	    <div class="image1">
+        	    <#--  <div class="image1">
         	        <img src="${url.resourcesPath}/img/CyberWasp-BG.jpg"
         	            style="width: 100%" alt="loginbannerimg" />
-        	    </div>
+        	    </div>  -->
               	</div>
               	<div class="login-content">
               		<#if displayMessage && message?has_content>
