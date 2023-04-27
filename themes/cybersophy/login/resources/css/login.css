@@ -212,13 +212,9 @@ body {
 } */
 
 .box1 {
-  /* width: 50%;
-  background: #101920;
-  display: flex; */
   width: 70%;
   height: auto;
   background: #101920;
-  /* display: flex; */
   background-image: url(../img/CyberWasp-BG.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -235,7 +231,7 @@ body {
   .login-content {
     width: 30%;
   }
-  .box1 {
+  /* .box1 {
     width: 70%;
-  }
+  } */
 }
