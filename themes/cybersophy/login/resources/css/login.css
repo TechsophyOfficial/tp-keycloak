@@ -1,0 +1,237 @@
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+.login-content {
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.login-content .box {
+  background-image: url(../img/BG2.svg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 80% 40%;
+}
+.login-content .box .box-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.login-content .box .logo {
+  margin-top: 50px;
+}
+.login-content .box .application-name {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: #000000;
+}
+.login-content .box .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.login-content .box .login-field {
+  width: 100%;
+  height: 35px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -0.4px;
+  /* text-align: center; */
+  color: #000000;
+  border: none;
+  border: 1px solid #bcbcbc;
+  border-radius: 20px;
+  outline: none;
+  background-color: #fff;
+  padding-left: 35px;
+}
+.login-content .box input[type="text"]:focus,
+.login-content .box input[type="password"]:focus {
+  border-bottom: 2px solid #0055b8;
+}
+.login-content .box input[type="text"]:-webkit-autofill,
+.login-content .box input[type="password"]:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+}
+.login-content .box .submit {
+  width: 147px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #40bbe3;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border-style: none;
+  cursor: pointer;
+}
+.login-content .box .visibility {
+  position: relative;
+  left: 296px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.54;
+  border: none;
+}
+.login-content .box .copyright {
+  position: relative;
+  color: #4d4d4d99;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  margin: unset;
+}
+.message-text {
+  width: 322px;
+  height: 22px;
+  opacity: 0.87;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #b8082a;
+  border: 0px;
+  position: relative;
+  top: 257px;
+  left: 126px;
+  display: inline-flex;
+  align-items: center;
+}
+.identity-providers {
+  width: 270px;
+  font-family: Muli;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.83;
+  letter-spacing: -0.4px;
+  text-align: left;
+  color: #0055b8;
+  margin-left: 32px;
+  margin-top: 20px;
+}
+
+.login-content .box .social-link-style {
+  width: 320px;
+  height: 36px;
+  border-radius: 2px;
+  background-color: var(--white);
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #00754a;
+  border-style: solid;
+  border-color: #00754a;
+  margin-top: 0px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.login-content .box .para {
+  font-family: Muli;
+  font-size: 14px;
+  margin-left: 30px;
+}
+
+.login-content .box .application-data {
+  text-align: center;
+}
+
+#usericon {
+  background-image: url(../img/User.png);
+  background-repeat: no-repeat;
+  background-position: 9px 10px;
+}
+
+.passwordicon {
+  background-image: url(../img/Password.png);
+  background-repeat: no-repeat;
+  background-position: 9px 10px;
+}
+
+.loginHeading-image {
+  height: 25px;
+  width: 20px;
+}
+
+/* .application-subHeading {
+} */
+
+.box1 {
+  width: 70%;
+  height: auto;
+  background: #101920;
+  background-image: url(../img/CyberWasp-BG.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.image1 {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .login-content {
+    width: 30%;
+  }
+  /* .box1 {
+    width: 70%;
+  } */
+}
