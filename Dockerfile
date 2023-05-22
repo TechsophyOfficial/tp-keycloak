@@ -3,6 +3,7 @@ COPY themes/awgment /opt/jboss/keycloak/themes/awgment
 COPY themes/ticketing /opt/jboss/keycloak/themes/ticketing
 COPY themes/playground /opt/jboss/keycloak/themes/playground
 COPY themes/mafkeycloak /opt/jboss/keycloak/themes/mafkeycloak
+COPY themes/paisaplan /opt/jboss/keycloak/themes/paisaplan
 RUN mkdir /opt/jboss/keycloak/standalone/deployments/providers
 COPY standalone/deployments/providers/ /opt/jboss/keycloak/standalone/deployments/providers/
 COPY imports/ /opt/jboss/keycloak/imports/
