@@ -1,5 +1,5 @@
 FROM jboss/keycloak:11.0.2
-#COPY themes/awgment /opt/jboss/keycloak/themes/awgment
+COPY themes/awgment /opt/jboss/keycloak/themes/awgment
 #COPY themes/ticketing /opt/jboss/keycloak/themes/ticketing
 #COPY themes/playground /opt/jboss/keycloak/themes/playground
 #COPY themes/mafkeycloak /opt/jboss/keycloak/themes/mafkeycloak
