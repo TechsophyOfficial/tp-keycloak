@@ -1,6 +1,88 @@
-.login-pf {
-  background: #f5f5f5 !important;
+.box1 {
+  width: 70%;
+  /* height: 100vh; */
+  background-color: #393939;
 }
+
+.image1 {
+  margin: 5% auto auto 15%;
+  width: 60%;
+}
+
+.textCoveredDiv {
+  margin: auto auto auto 15%;
+  width: 60%;
+}
+
+.customTextField {
+  font-size: 12px !important;
+  padding: 8px 50px 8px 10px !important;
+  border-radius: 50px !important;
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  border-width: 1px !important;
+}
+
+.proceedButton {
+  text-transform: unset;
+  background-color: #b92250;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px !important;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.textCoveredP {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  font-family: century "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  margin: 0px 0px;
+}
+
+.textDiv {
+  margin: auto auto auto 15%;
+  width: 60%;
+  padding: 10px;
+}
+
+.textP {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}
+
+.buttonDiv {
+  margin: auto auto auto 15%;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+}
+
+.buttonTag {
+  background: #b92250;
+  padding: 7px 50px;
+  border-radius: 20px;
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+}
+
+.box2 {
+  width: 30%;
+  /* height: 100vh; */
+  min-width: 300px;
+  background-color: white;
+}
+
+.image2Div {
+  margin: 10% auto auto 29%;
+}
+
 .login-pf body {
   background: #f5f5f5;
   background-size: cover;
@@ -104,19 +186,20 @@ div.kc-logo-text span {
   color: #ededed;
   overflow: visible;
   white-space: nowrap;
-  margin-bottom: -15px;
+  margin-bottom: 0px !important;
 }
 
 #kc-header-wrapper {
-  background-image: url(../img/medunited_logo.svg);
+  background-image: url(../img/lock.svg);
   background-repeat: no-repeat;
   background-position: center;
   font-size: 29px;
   text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 1.2em;
-  padding: 20px 10px 20px;
+  padding: 62px 10px 20px;
   white-space: normal;
+  margin-top: 25%;
 }
 
 #kc-content {
@@ -175,7 +258,12 @@ div.kc-logo-text span {
   margin-top: 30px;
   color: #909090;
 }
-
+.title {
+  font-size: 25px;
+  color: #5c3a58;
+  margin: 20px;
+  font-variant: all-small-caps;
+}
 .required {
   color: #cb2915;
 }
@@ -340,11 +428,13 @@ a.zocial {
   /* box-shadow: inset -2px -2px 4px rgb(255 255 255 / 50%),
     inset 2px 2px 4px rgb(170 170 204 / 25%),
     inset 5px 5px 10px rgb(170 170 204 / 50%), inset -5px -5px 10px #ffffff; */
-  border-radius: 12px;
-  border: 1px solid #162952;
+  border-radius: 40px;
+  border: none;
   /* background: #f5f5f5; */
-  min-height: 55px;
-  padding-left: 15px;
+  min-height: 30px;
+  width: 75%;
+  border: 1px solid black;
+  /* padding-left: 10px; */
 }
 .form-control::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -385,23 +475,6 @@ a.zocial {
 .full-height {
   /* height: calc(100vh - 60px); */
   display: flex;
-  /* padding-bottom: 150px; */
-}
-.control-label {
-  color: #162952;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-}
-
-.login-wrap {
-  /* height: calc(100vh - 60px); */
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  background-color: white;
-  width: 30%;
-  border-radius: 20px;
 }
 
 .page-footer {
@@ -432,22 +505,19 @@ a.zocial {
 .login-pf-page,
 .welcome-page-section {
   flex: 1;
-  align-self: center;
+  /* align-self: center; */
 }
 .welcome-page-section {
   flex: none;
   margin: auto;
-  display: none;
 }
 
 .welcome {
-  background-image: url(../img/background.svg);
+  background-image: url(../img/augment_bg.svg);
   background-color: #fff;
   background-size: 100%;
   background-repeat: no-repeat;
-  /* background-origin: content-box; */
-  width: 100%;
-  height: 100vh;
+  background-origin: content-box;
 }
 .welcome-text h1 {
   font-size: 40px;
@@ -468,8 +538,7 @@ a.zocial {
   margin-top: 32px;
 }
 .welcome-page-card {
-  width: 200px;
-
+  width: 206px;
   float: right;
   background: #f5f5fa;
   box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
@@ -631,7 +700,8 @@ a.zocial {
 }
 
 #kc-form-buttons {
-  margin-top: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .login-pf-page .login-pf-brand {
@@ -639,7 +709,14 @@ a.zocial {
   max-width: 360px;
   width: 40%;
 }
+.login-pf-settings {
+  width: 70%;
+}
 
+::-webkit-input-placeholder {
+  /* color: peachpuff !important; */
+  font-size: 15px !important;
+}
 .card-pf {
   background: transparent;
   margin: 0 auto;
@@ -707,17 +784,18 @@ a.zocial {
 
 .login-pf-page .btn-primary {
   margin-top: 0;
-  width: 150px !important;
-  height: 40px;
-  background: #162952;
+  width: max-content !important;
+  /* height: 45px; */
+
+  background: #b92250;
   /* box-shadow: -5px -5px 10px rgb(255 255 255 / 50%),
     5px 5px 10px rgb(170 170 204 / 25%), 10px 10px 20px rgb(170 170 204 / 50%),
     -10px -10px 20px #ffffff; */
-  border-radius: 8px;
+  border-radius: 32px;
   border: none;
   color: white;
   margin: auto;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .login-pf-page .list-view-pf .list-group-item {
@@ -729,12 +807,9 @@ a.zocial {
 }
 
 .login-pf-page .card-pf {
-      margin-bottom: 10px;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 10px;
-    margin-top: 20px;
-    background-color: #fff;
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  margin-bottom: 10px;
+  text-align: -webkit-center;
+  text-align: -moz-center;
 }
 
 #kc-form-login div.form-group:last-of-type,
@@ -752,7 +827,11 @@ form#kc-select-back-form div.login-pf-social-section {
   border-left: 0px;
 }
 
-.body-wrapper {
-  display: flex;
-  flex-direction: column;
+/* Firefox 4-18 */
+:-moz-placeholder {
+  font-size: 12px !important;
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+  font-size: 12px !important;
 }

@@ -13,7 +13,7 @@
         </#list>
     </#if>
     <title>${msg("loginTitle",(realm.displayName!''))}</title>
-    
+    <link rel="icon" href="${url.resourcesPath}/img/fav.svg" />
     <#if properties.stylesCommon?has_content>
         <#list properties.stylesCommon?split(' ') as style>
             <link href="${url.resourcesCommonPath}/${style}" rel="stylesheet" />
@@ -44,14 +44,45 @@
 
 <div class="col-12">
   <div class="${properties.kcLoginClass!}" >
-    <#--  <div id="kc-header" class="${properties.kcHeaderClass!}">
-      <div id="kc-header-wrapper" class="${properties.kcHeaderWrapperClass!}"></div>
-    </div>  -->
-    <#nested "form">
+    
+    <#-- App-initiated actions should not see warning messages about the need to complete the action -->
+          <#-- during login.                                                                               -->
+          <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
+              <div class="alert alert-${message.type}">
+                  <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
+                  <#if message.type = 'warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
+                  <#if message.type = 'error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
+                  <#if message.type = 'info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
+                  <span class="kc-feedback-text">${kcSanitize(message.summary)?no_esc}</span>
+              </div>
+          </#if>
+
+          <#nested "form">
+          
+          <#if auth?has_content && auth.showTryAnotherWayLink() && showAnotherWayIfPresent>
+          <form id="kc-select-try-another-way-form" action="${url.loginAction}" method="post" <#if displayWide>class="${properties.kcContentWrapperClass!}"</#if>>
+              <div <#if displayWide>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
+                  <div class="${properties.kcFormGroupClass!}">
+                    <input type="hidden" name="tryAnotherWay" value="on" />
+                    <a href="#" id="try-another-way" onclick="document.forms['kc-select-try-another-way-form'].submit();return false;">${msg("doTryAnotherWay")}</a>
+                  </div>
+              </div>
+          </form>
+          </#if>
+
+          <#if displayInfo>
+              <div id="kc-info" class="${properties.kcSignUpClass!}">
+                  <div id="kc-info-wrapper" class="${properties.kcInfoAreaWrapperClass!}">
+                      <#nested "info">
+                  </div>
+              </div>
+          </#if>
+
     
   </div>
   </div>
  </div>
+
   <!-- Footer -->
 <#--  <footer class="page-footer font-small blue">
 
@@ -63,7 +94,7 @@
                 </div>
                 <div class="footer-text">
                     <p style="width: 100%; text-align: right">
-                        Powered by <b>AWGMENT</b>
+                        Powered by <b>AUGMENT</b>
                     </p>
                 </div>
             </div>

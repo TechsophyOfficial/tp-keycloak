@@ -24,7 +24,6 @@
 .login form {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 10px 10px -10px #666;
-    height:260px;
     background: #fff;
 }
 .login header {
@@ -62,6 +61,7 @@
 }
 .form-group {
     padding: 10px;
+    margin-bottom: unset !important;
 }
 .form-input {
     height: 100% !important;
@@ -104,17 +104,7 @@
       </div>
       <header class="reg-header" style="background: #004c91">
     <div class="left">Login</div>
-    <!-- <div class="right locale-wrapper">
-      <span class="locale-text"
-        >{{'LOGIN_LABEL_SELECT_LOCALE_KEY' | translate}}
-      </span>
-      <select
-        id="locale"
-        ng-model="selectedLocale"
-        ng-options="item.code as item.nativeName for item in locales"
-        required
-      ></select>
-    </div> -->
+    
   </header>
         <#if realm.password>
             <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
@@ -155,34 +145,14 @@
                 </div>
                 </div>
 
-                <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
-                    <div id="kc-form-options">
-                        <#if realm.rememberMe && !usernameEditDisabled??>
-                            <div class="checkbox">
-                                <label>
-                                    <#if login.rememberMe??>
-                                        <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox" checked> ${msg("rememberMe")}
-                                    <#else>
-                                        <input tabindex="3" id="rememberMe" name="rememberMe" type="checkbox"> ${msg("rememberMe")}
-                                    </#if>
-                                </label>
-                            </div>
-                        </#if>
-                        </div>
-                        <div class="${properties.kcFormOptionsWrapperClass!}">
-                            <#if realm.resetPasswordAllowed>
-                                <span><a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a></span>
-                            </#if>
-                        </div>
+             
 
-                  </div>
-
-                  <div id="kc-form-buttons" class="${properties.kcFormGroupClass!} form-footer">
+                  <div id="kc-form-buttons" class=" form-footer">
                       <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
-                      <#--  <input tabindex="4" style="display: inline-block;margin: 2px;width: 73%;background: #004c91;border: 1px solid #004c91;width: 168px;height: 26px;border-radius: 3px;
+                      <#--  <input tabindex="4" style="display: inline-block;margin: 2px;width: 73%;background: #004c91;border: 1px solid #004c91;width: 168px;border-radius: 3px;
     color: #fff;" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
       -->
-       <input tabindex="4" style="display: inline-block;margin: 2px;width: 73%;background: #004c91;border: 1px solid #004c91;width: 178px;height: 30px;border-radius: 3px;
+       <input tabindex="4" style="display: inline-block;margin: 2px;width: 73%;background: #004c91;border: 1px solid #004c91;width: 178px;border-radius: 3px;
     color: #fff;cursor: pointer;" class="${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="Login" />
                   </div>
                   </div>
@@ -213,14 +183,7 @@
 
     </div>
     <#elseif section = "info" >
-        <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-            <div id="kc-registration-container">
-                <div id="kc-registration">
-                    <span>${msg("noAccount")} <a tabindex="6"
-                                                 href="${url.registrationUrl}">${msg("doRegister")}</a></span>
-                </div>
-            </div>
-        </#if>
+        
     </#if>
 
 </@layout.registrationLayout>
