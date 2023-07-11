@@ -1,4 +1,4 @@
-FROM jboss/keycloak:11.0.2
+FROM jboss/keycloak:16.1.1
 COPY themes/awgment /opt/jboss/keycloak/themes/awgment
 COPY themes/ticketing /opt/jboss/keycloak/themes/ticketing
 COPY themes/playground /opt/jboss/keycloak/themes/playground
