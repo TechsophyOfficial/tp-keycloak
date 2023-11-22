@@ -34,7 +34,8 @@
             </div>
 
               	</div>
-              	<div class="login-content">
+              	<div class="login-content"style="background: url('${url.resourcesPath}/img/abstract-white-lines-background-minimal-dynamic-shape-3d-rendering 1.svg') no-repeat top right fixed; background-size: contain;">
+                
               		<#if displayMessage && message?has_content>
 				<div class="alert alert-${message.type}">
 				     <#if message.type = 'success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>

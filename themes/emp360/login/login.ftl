@@ -18,14 +18,9 @@
             }
         </script>
     <#elseif section = "form">
-<div class=" box2" style="background: url('${url.resourcesPath}/img/abstract-white-lines-background-minimal-dynamic-shape-3d-rendering 1.svg') no-repeat top right fixed; background-size: contain; ">
- 	
+<div class=" box2" >
       <div style="display: flex; width:100%">
-
-                <img src="${url.resourcesPath}/img/Innovations.svg" style="width: 60px; margin-right: 10px; margin-top:8%"alt="innovationsImg " />
-
-            
-
+                <img src="${url.resourcesPath}/img/Innovations.svg" style="width: 60px; margin-right: 10px; margin-top:4%"alt="innovationsImg " />
                 <div class="box2-container">
     <div style="display: flex; flex-direction: column; align-items: flex-start; max-width: 600px; width: 100%;">
             
@@ -47,9 +42,9 @@
                 
             </div>
              <#if social.providers??>
-            <div id="social-providers1">
+            <div id="social-providers">
                 <#list social.providers as p>
-                <input class="social-link-style" type="button" onclick="location.href='${p.loginUrl}';" value="${p.displayName}"/>
+                <a class="social-link-style" href="${p.loginUrl}">${p.displayName}</a>
                 </#list>
             </div>
         </#if>
