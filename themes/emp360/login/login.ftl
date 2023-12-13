@@ -47,9 +47,9 @@
                 
             </div>
              <#if social.providers??>
-            <div id="social-providers" style="display: flex; flex-direction: column; justify-content: center; flex-wrap: wrap">
+            <div id="social-providers" style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 2%">
                 <#list social.providers as p>
-                <a class="social-link-style" href="${p.loginUrl}">${p.displayName}</a>
+                <a class="social-link-style" href="${p.loginUrl}" style="width: fit-content; border-radius: 40px; text-decoration:none; font-family: Roboto, sans-serif;">${p.displayName}</a>
                 </#list>
             </div>
         </#if>
