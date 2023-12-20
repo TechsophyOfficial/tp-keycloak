@@ -21,7 +21,7 @@
     <#elseif section = "form">
     <div class="box">
  	<div>
-            <img class="logo" src="${url.resourcesPath}/img/cybersophy-logo.svg" alt="cyberwasp">
+            <img class="logo" src="${url.resourcesPath}/img/logo-cybersophy.svg" alt="cybersophy">
          </div>   
         
                 <div class="box-container">

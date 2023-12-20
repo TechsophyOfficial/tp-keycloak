@@ -24,7 +24,7 @@
               	<#nested "header">
 		<div class="box1">
         	    <#--  <div class="image1">
-        	        <img src="${url.resourcesPath}/img/CyberWasp-BG.jpg"
+        	        <img src="${url.resourcesPath}/img/CyberWasp-BG.png"
         	            style="width: 100%" alt="loginbannerimg" />
         	    </div>  -->
               	</div>
