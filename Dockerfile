@@ -4,6 +4,7 @@ COPY themes/paisaplan /opt/jboss/keycloak/themes/paisaplan
 COPY themes/medunited /opt/jboss/keycloak/themes/medunited
 COPY themes/cybersophy /opt/jboss/keycloak/themes/cybersophy
 COPY themes/emp360 /opt/jboss/keycloak/themes/emp360
+COPY themes/insurpro /opt/jboss/keycloak/themes/insurpro
 RUN mkdir /opt/jboss/keycloak/standalone/deployments/providers
 COPY standalone/deployments/ts_awgment_user_register_spi.jar /opt/jboss/keycloak/standalone/deployments/ts_awgment_user_register_spi.jar
 COPY standalone/deployments/providers/ /opt/jboss/keycloak/standalone/deployments/providers/
