@@ -17,12 +17,11 @@
 
 <body class="${properties.kcBodyClass!}">
 	<div style="display: flex;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             overflow-x: hidden;
             overflow-y: hidden;">
               	<#nested "header">
-    
 		<div class="box1">
         	   
         	<div class="image1">
@@ -35,7 +34,7 @@
             </div>
 
               	</div>
-              	<div class="login-content" style="width: 50%">
+              	<div class="login-content"style="background: url('${url.resourcesPath}/img/abstract-white-lines-background-minimal-dynamic-shape-3d-rendering 1.svg') no-repeat top right fixed; background-size: contain;">
                 
               		<#if displayMessage && message?has_content>
 				<div class="alert alert-${message.type}">
@@ -49,9 +48,7 @@
 			<#nested "form">
               	</div>
               
-        </div>
-     
-    </div>    
+         </div>
 </body>
 </html>
 </#macro>

@@ -14,28 +14,28 @@ body {
   margin: 0;
 }
 .login-content {
-  /* background-size: contain;
-  background-position: center; */
+  background-size: cover;
+  background-position: center;
   width: 50%;
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 .login-content .box2 {
-  /* background-image: url(../../resources/img/Export-bg.svg) !important; */
+  /* background-image: url(../img/BG2.svg); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* gap: 20px; */
+  gap: 20px;
   height: 100%;
-  /* padding: 20px; */
-  /* background-repeat: no-repeat;
+  padding: 20px;
+  background-repeat: no-repeat;
   background-position: right bottom;
-  background-size: 80% 40%; */
+  background-size: 80% 40%;
 }
 .login-content .box2 .box2-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,16 +51,18 @@ body {
   font-style: normal;
   line-height: 21px;
   display: flex;
-  justify-content: flex-start;
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   padding: 10px;
   color: #000000;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 25px;
   color: #162952;
   margin: 20px;
   margin: 20% auto auto auto;
+
+  
 }
 .login-content .box2 .form {
   display: flex;
@@ -72,7 +74,7 @@ body {
 .login-content .box2 .login-field {
   width: 100%;
   height: 35px;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -100,7 +102,7 @@ body {
   height: 40px;
   border-radius: 50px;
   background-color: #162952;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -124,7 +126,7 @@ body {
 .login-content .box2 .copyright {
   position: relative;
   color: #4d4d4d99;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto;
   font-style: normal;
   font-weight: 400;
   margin: unset;
@@ -133,7 +135,7 @@ body {
   width: 322px;
   height: 22px;
   opacity: 0.87;
-  font-family: Muli, sans-serif;
+  font-family: Muli;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -150,7 +152,7 @@ body {
 }
 .identity-providers {
   width: 270px;
-  font-family: Roboto, sans-serif;
+  font-family: Muli;
   font-size: 16px;
   font-weight: 600;
   font-style: normal;
@@ -168,18 +170,18 @@ body {
   padding: 8px 20px;
   border-radius: 2px;
   background-color: var(--white);
-  font-family: Roboto, sans-serif;
   text-align: center;
   color: #162952;
   border: 2px solid #162952;
   margin-top: 30px;
   line-height: 1.6;
-  /* width: fit-content; */
+  width: 70%;
   height: 30%;
 }
 
+
 .login-content .box2 .para {
-  font-family: Muli, sans-serif;
+  font-family: Muli;
   font-size: 14px;
   margin-left: 30px;
 }
@@ -192,17 +194,16 @@ body {
   background-image: url(../img/User.svg);
   background-repeat: no-repeat;
   background-position: 6%;
-  padding-left: 55px;
-  background-size: 6%;
+  padding-left: 55px; 
+  background-size: 6%
 }
 
 .passwordicon {
   background-image: url(../img/Lock_img.svg);
   background-repeat: no-repeat;
   background-position: 6%;
-  padding-left: 55px;
-  background-size: 6%;
-}
+  padding-left: 55px; 
+  background-size: 6%}
 
 .loginHeading-image {
   height: 25px;
@@ -216,6 +217,7 @@ body {
   width: 50%;
   /* height: 100vh; */
 }
+
 
 .image1 {
   display: flex;

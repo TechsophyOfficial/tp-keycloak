@@ -18,18 +18,13 @@
             }
         </script>
     <#elseif section = "form">
-<div class="box2" style="width: 100%">
-
-<div style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
-                <img src="${url.resourcesPath}/img/Export-bg.svg" style="width: 100%; height: 100%; object-fit: cover;" alt="loginbannerimg" />
-            </div>
-   
-      
-              
- <div class="box2-container" style="position: absolute">
-    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+<div class=" box2" >
+      <div style="display: flex; width:100%">
+                <img src="${url.resourcesPath}/img/Innovations.svg" style="width: 60px; margin-right: 10px; margin-top:4%"alt="innovationsImg " />
+                <div class="box2-container">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; max-width: 600px; width: 100%;">
             
-                <div class="application-name"> Log In</div>
+                <div class="application-name" style="text-align: center;margin-left:24%  " > Log In</div>
                 <#--  <p class="application-data">Log in to continue to Parasakti Portal</p>  -->
             </div>
         <#if realm.password>
@@ -47,9 +42,9 @@
                 
             </div>
              <#if social.providers??>
-            <div id="social-providers" style="display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 2%">
+            <div id="social-providers">
                 <#list social.providers as p>
-                <a class="social-link-style" href="${p.loginUrl}" style="width: fit-content; border-radius: 40px; text-decoration:none; font-family: Roboto, sans-serif;">${p.displayName}</a>
+                <a class="social-link-style" href="${p.loginUrl}">${p.displayName}</a>
                 </#list>
             </div>
         </#if>
@@ -65,8 +60,6 @@
         </div>
        
     </div>
- </div>
-</div>
     
       </#if>
 </@layout.registrationLayout>
