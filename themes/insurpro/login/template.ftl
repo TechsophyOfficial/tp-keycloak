@@ -22,7 +22,6 @@
             overflow-x: hidden;
             overflow-y: hidden;
 			box-sizing:border-box;">
-              	<#nested "header">
 			<div class="box1">
         	    <div class="image1">
         	        <img src="${url.resourcesPath}/img/Group 24042055.svg" style="margin-top:5vh;"
@@ -42,6 +41,7 @@
 						<span class="message-text">${message.summary?no_esc}</span>
 					</div>
 					</#if>
+					<b><#nested "header"></b>
 					<#nested "form">
 					</div>
 					<div class="rights">

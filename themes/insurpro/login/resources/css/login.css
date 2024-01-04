@@ -13,6 +13,9 @@ html {
 body {
   margin: 0;
 }
+
+
+
 .login-content {
   width: 30%;
   background-size: cover;
@@ -235,6 +238,80 @@ body {
   width: 30%;
   position: absolute;
   bottom: 1%;
+}
+
+/* update form styles */
+.login-content .form-horizontal{
+  margin-top: 5%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 20px;
+}
+.form-group .form-control{
+  height: 35px;
+  width: 100%;
+  font-family: Roboto,sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -0.4px;
+  color: #000000;
+  border: none;
+  border: 1px solid #bcbcbc;
+  border-radius: 20px;
+  outline: none;
+  background-color: #fff;
+  padding-left: 25px;
+}
+/* #password-new::before{
+  content: "New Password";
+  color: #000000;
+} */
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+}
+.control-label{
+  padding-left: 15px;
+  margin-bottom: 30px;
+}
+.form-group .btn-lg{
+  width: 147px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #fbb511;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  border-style: none;
+  cursor: pointer;
+}
+#kc-form-buttons {
+  display: flex;
+  justify-content: center;
+}
+.log-container b { 
+  margin-top: 5%;
+  font-family: Roboto,sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
 }
 @media only screen and (min-width: 992px) {
   .login-content {

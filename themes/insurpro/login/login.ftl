@@ -20,7 +20,7 @@
                 </script>
                 <#elseif section="form">
                     <div style="text-align: center"> 
-<img class="logo" src="${url.resourcesPath}/img/Group 24042057.svg" alt="Logo-insur">
+                        <img class="logo" src="${url.resourcesPath}/img/Group 24042057.svg" alt="Logo-insur">
                     </div>
                     <div class="box">
                 
