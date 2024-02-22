@@ -13,6 +13,34 @@ html {
 body {
   margin: 0;
 }
+/* 
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('https://fonts.googleapis.com/css2?family=Poppins');
+  font-display: swap;
+} */
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff') format('woff');
+  font-display: swap;
+}
+/* @font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  src: url('https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff') format('woff');
+  font-display: swap;
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1xlFQ.woff') format('woff');
+  font-display: swap;
+} */
 
 
 
@@ -42,13 +70,13 @@ body {
   align-items: center;
   gap: 20px;
 }
-.login-content .box .logo {
+/* .login-content .box .logo {
   margin-top: 50px;
-}
+} */
 .login-content .box .application-name {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
+  font-family: Poppins, sans-serif;
+  font-size: 35px;
+  font-weight: 300px;
   font-style: normal;
   line-height: 21px;
   display: flex;
@@ -56,7 +84,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 10px;
-  color: #000000;
+  color: #000036;
 }
 .login-content .box .form {
   display: flex;
@@ -85,7 +113,7 @@ body {
 }
 .login-content .box input[type="text"]:focus,
 .login-content .box input[type="password"]:focus {
-  border-bottom: 2px solid #fbb511;
+  border-bottom: 2px solid #000036;
 }
 .login-content .box input[type="text"]:-webkit-autofill,
 .login-content .box input[type="password"]:-webkit-autofill {
@@ -95,7 +123,7 @@ body {
   width: 147px;
   height: 40px;
   border-radius: 50px;
-  background-color: #fbb511;
+  background-color: #016beb;
   font-family: Roboto;
   font-size: 14px;
   font-weight: bold;
@@ -204,27 +232,92 @@ body {
 .box1 {
   width: 70%;
   height: auto;
-  background: linear-gradient(180deg, #fbb511 0%, rgba(0, 0, 0, 0) 100%);
-  background-image: url(../img/Group\ 24042058.svg);
+  background: linear-gradient(180deg, #378ad8 0%, rgba(133, 131, 131, 0) 100%);
+  background-image: url(../img/Main-Bg.png);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.image1 {
-  text-align: center;
+.header {
+  width: 78%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
 }
 
-.image1 img {
-  display: block;
-  margin: auto;
+.banner-sub-text {
+  font-family: Poppins;
+  font-size: 2.188rem;
+  font-weight: 300;
+  line-height: 2.875rem;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #000036;
 }
 
+.sub-icons {
+  width: 26%;
+}
+
+.sub-icons-heading {
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000036;
+}
+.icons-sub-text {
+  font-family: Poppins, sans-serif;
+  font-size: 0.938rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000036;
+}
+
+.footer-main-heading {
+  font-family: Poppins, sans-serif;
+  font-size: 1.063rem;
+  font-weight: 600;
+  line-height: 1.625rem;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding-left: 5%;
+  color: #000000;
+}
+.footer-sub-text {
+  font-family: Poppins, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding-left: 5%;
+  margin-top: -1%;
+  color: #000000;
+}
 .alert {
   text-align: center;
 }
 .copyright {
+  font-family: Roboto, sans-serif;
   text-align: center;
   color: gray;
 }
@@ -241,19 +334,18 @@ body {
 }
 
 /* update form styles */
-.login-content .form-horizontal{
-  margin-top: 5%;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- gap: 20px;
+.login-content .form-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
-.form-group .form-control{
+.form-group .form-control {
   height: 35px;
   width: 100%;
-  font-family: Roboto,sans-serif;
-  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -270,23 +362,31 @@ body {
   content: "New Password";
   color: #000000;
 } */
-
-.form-group{
+span {
+  font-family: poppins, sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #016beb;
+}
+label {
+  font-family: poppins, sans-serif;
+}
+.form-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: 60%;
 }
-.control-label{
+.control-label {
   padding-left: 15px;
   margin-bottom: 30px;
 }
-.form-group .btn-lg{
+.form-group .btn-lg {
   width: 147px;
   height: 40px;
   border-radius: 50px;
-  background-color: #fbb511;
-  font-family: Roboto;
+  background-color: #016beb;
+  font-family: Poppins, sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -301,10 +401,18 @@ body {
   display: flex;
   justify-content: center;
 }
-.log-container b { 
-  margin-top: 5%;
-  font-family: Roboto,sans-serif;
-  font-size: 18px;
+#kc-form-options {
+  margin-top: -10px;
+  margin-bottom: 15px;
+  
+  & span{
+    font-size: 0.9rem !important;
+    padding-left: 0.4rem;
+  }
+}
+.log-container b {
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem;
   font-weight: 400;
   font-style: normal;
   line-height: 21px;
@@ -312,7 +420,25 @@ body {
   justify-content: center;
   align-items: center;
   color: #000000;
+  margin-bottom: 5%;
+  text-align: center;
 }
+
+.login-content .box .box-container {
+  transform: scale(1);
+}
+
+.logo {
+  transform: scale(1);
+  margin-bottom: 8vh;
+}
+
+.form-group div span {
+  color: red;
+  padding-left: 1rem;
+  font-size: 0.7rem;
+}
+
 @media only screen and (min-width: 992px) {
   .login-content {
     width: 30%;
@@ -321,3 +447,48 @@ body {
     width: 70%;
   } */
 }
+
+@media only screen and (max-width: 1024px) {
+  .box1 {
+    display: none;
+  }
+  .login-content {
+    background: linear-gradient(
+      180deg,
+      #378ad810,
+      #378ad870
+    );
+    /* background-image: url(../img/Main-Bg.png); */
+    width: 100%;
+  }
+  .rights {
+    width: 100%;
+    position: absolute;
+    bottom: 1%;
+  }
+}
+
+/* @media (min-width: 600px) and (max-width: 800px) {
+  .login-content{
+    transform: scale(1.2);
+  }
+  .logo {
+    transform: scale(1.2);
+    margin-bottom: 18vh;
+  }
+  .rights {
+    transform: scale(1.2);
+  }
+}
+@media (min-width: 200px) and (max-width: 500px) {
+  .login-content{
+    transform: scale(2);
+  }
+  .logo {
+    transform: scale(2);
+    margin-bottom: 18vh;
+  }
+  .rights {
+    transform: scale(2);
+  }
+} */

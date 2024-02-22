@@ -19,14 +19,16 @@
                 }
                 </script>
                 <#elseif section="form">
-                    <div style="text-align: center"> 
-                        <img class="logo" src="${url.resourcesPath}/img/Group 24042057.svg" alt="Logo-insur">
-                    </div>
+                <div style="text-align: center;">
+                       <img style="margin-top:-13vh" class="logo" src="${url.resourcesPath}/img/Logo.png" alt="Logo-insur">
+                </div>
                     <div class="box">
                 
                         <div class="box-container">
-                            <div>
-                                <div class="application-name"> <img class="loginHeading-image" src="${url.resourcesPath}/img/Group 779.svg"> Log In</div>
+                            <div style="margin-bottom:2vh">
+                            <#--  logo-icon  -->
+                            <#--  <img class="loginHeading-image" src="${url.resourcesPath}/img/Group 779.svg">  -->
+                                <div class="application-name">  Log In</div>
                             </div>
                             <#if realm.password>
                                 <div>
@@ -39,11 +41,20 @@
                                 </div>
                             </#if>
                            
-        <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
-            <div id="kc-registration">
-                <span>${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a></span>
-            </div>
-        </#if>
+                            <div style="display: flex; gap: 2%; width:100%; justify-content:center;">
+                                <#if realm.resetPasswordAllowed>
+                                    <span>
+                                        <a tabindex="5" href="${url.loginResetCredentialsUrl}">${msg("doForgotPassword")}</a>
+                                    </span>
+                                </#if>
+                                <#if realm.resetPasswordAllowed && realm.password && realm.registrationAllowed && !registrationDisabled??>
+                                <span> || </span>
+                                </#if>
+                                <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
+                                     <span>${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a></span> 
+                                </#if>
+                                
+                            </div> 
                             <#if social.providers??>
                                 <#--  <p class="para">${msg("selectAlternative")}</p>  -->
                                     <div id="social-providers">
