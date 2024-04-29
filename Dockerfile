@@ -1,5 +1,5 @@
-FROM jboss/keycloak:11.0.2
-COPY themes/awgment /opt/jboss/keycloak/themes/awgment
+FROM quay.io/keycloak/keycloak:11.0.2
+CPY themes/awgment /opt/jboss/keycloak/themes/awgment
 # COPY themes/paisaplan /opt/jboss/keycloak/themes/paisaplan
 # COPY themes/medunited /opt/jboss/keycloak/themes/medunited
 COPY themes/cybersophy /opt/jboss/keycloak/themes/cybersophy
