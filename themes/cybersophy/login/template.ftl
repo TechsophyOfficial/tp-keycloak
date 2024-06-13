@@ -22,29 +22,29 @@
         </#list>
     </#if>
 </head>
+	<script>
+	// Function to change the submit button value
+		document.addEventListener('DOMContentLoaded', function() {
+			var button = document.querySelector("#kc-form-buttons input[type='submit']");
+			if (button) {
+				button.value = "Send Recovery mail";
+			} else {
+				console.error("Submit button not found!");
+			}
+		});
+	</script>
 <body class="${properties.kcBodyClass!}">
-	<div style="display: flex;
-            width: 100%;
-            height: 100vh;
-            overflow-x: hidden;
-            overflow-y: hidden;
-			box-sizing:border-box;">
-			<div class="box1">
-        	    <div class="header">
-					<h1>SECURE YOUR WEB APPLICATIONS</h1>
-					<h2>with</h2>
-					<img src="${url.resourcesPath}/img/cybersophy-logo.svg" alt="Logo">
-					
-        	    </div>
-				
-            </div>
+	<div class="login-page-container">
+            <div class="login-page-quarter-circle">
+				<div class="logo-container">
+				    <div class="login-page-logo">
+                    	<img class="logo" src="${url.resourcesPath}/img/cybersophy-logo.svg" alt="cyberwasp">
+					</div>
+				</div>	
 
-			
-            <div class="login-content">
-			
-					<div class="log-container" >
-					<#if displayMessage && message?has_content>
-			<div class="alert alert-${message.type}">
+			<div>
+			<#if displayMessage && message?has_content>
+				<div class="alert alert-${message.type}">
 				<#if message.type = ' success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
 				<#if message.type='warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
 				<#if message.type='error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
@@ -52,14 +52,16 @@
 				<span class="message-text">${message.summary?no_esc}</span>
 			</div>
 			</#if>
-              		
-					<b><#nested "header"></b>
-					<#nested "form">
-					</div>
-					<div class="rights">
-    					<p class="copyright"> © ${.now?string("yyyy")} Copyrights reserved by CyberWasp</p>
-                    </div>
+            <div class="forgot-password-form-title">		
+				<b><#nested "header"></b>
 			</div>
+			<#nested "form" >
+			
+			</div>
+			<div class="rights">
+				<p class="copyright"> © ${.now?string("yyyy")} Copyrights reserved by CyberWasp</p>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
