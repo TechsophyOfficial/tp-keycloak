@@ -37,10 +37,10 @@ body {
   top: 0;
   right: 0;
   width: 100%; /* Adjust the width and height as needed */
-  height: 100%;
-  background-color: transparent;
-  border-top-left-radius: 100px;
+  height: 150%;
+  /* border-top-left-radius: 10rem; */
   background: radial-gradient(circle at top right, #0046FF 20%, transparent 20%);
+
 
 }
 
@@ -68,11 +68,8 @@ body {
 
 
 .box form input {
-  /* margin-bottom: 1rem; */
-  padding: 1rem;
-  width: 100%;
+  padding: 1.4rem;
   box-sizing: border-box;
-
 }
 
 .box form button {
@@ -171,16 +168,20 @@ body {
   font-weight: 400;
   margin: unset;
 }
+
+
+
 .message-text {
   opacity: 0.87;
   font-family: Barlow;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 1.2rem;
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  letter-spacing: -0.4px;
-  color: #b8082a;
-  border: 0px;
+  color: #FF0000;
+  margin-left: 10px;
+  border: 0px; 
+ 
 }
 .identity-providers {
   width: 270px;
@@ -298,8 +299,11 @@ body {
 
 .alert {
   text-align: center;
-
+  position: relative;
+  bottom:6%;
+  right:26%
 }
+
 
 .rights {
   width: 45%;
@@ -321,6 +325,7 @@ body {
 }
 .login-page-quarter-circle .form-horizontal input{
  width: 45%;
+ border-radius: 1rem;
 }
 
 #kc-form-buttons input[type="submit"] {
@@ -355,6 +360,7 @@ a{
   text-decoration: none;
   color: #0046FF;
   font-size: 1rem;
+  font-weight:600;
 }
 label {
   font-family: Barlow;
@@ -370,8 +376,9 @@ label {
 
 }
 .control-label {
-  padding-left: 15px;
-  /* margin-bottom: 30px; */
+  padding-left: 3px;
+  color:#0046FF;
+  font-weight:500;
 }
 .form-group .btn-lg {
   width: 147px;
@@ -404,8 +411,14 @@ label {
 #kc-form-options span{
   font-size: 0.9rem !important;
   padding-left: 0.4rem;
+}
+#kc-form-options a{
+  position: absolute;
+ top:105%;
+ right:62%
 
 }
+
 .log-container b {
   font-family: 'Barlow' !important;
   font-size: 1.5rem;
@@ -481,7 +494,7 @@ label {
 .login-form-container{
    width:100%;
    display: flex;
-   padding-left: 3%;
+   padding-left: 5%;
    flex-direction: column;
    align-items: flex-start;
 
@@ -490,8 +503,9 @@ label {
 
 
 .login-form {
-  max-width: 60%;
-  padding: 1.5rem;
+  max-width: 70%;
+  padding: 5%;
+  padding-bottom: 8%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -502,7 +516,7 @@ label {
 
 
 .login-form-title{
-  font-size: 1.6rem;
+  font-size: 2rem !important;
   color:#0046FF;
   font-weight: 600;
   padding-left: 1.5rem;
@@ -520,11 +534,13 @@ label {
 .form-input-container input {
   border: 1px solid #ccc;
   border-radius: 1rem;
-
+  width:100%
 }
 
 .form-input-container label{
   margin-bottom: 0.6rem;
+  color:#0C87F0;
+  font-weight: 500;
 }
 
 .password-field {
@@ -541,13 +557,14 @@ label {
   top: 65%;
   transform: translateY(-50%);
   cursor: pointer;
+
 }
 
 .form-options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 1.5rem; */
+  padding: 5% 0 5% 0;
   
 }
 
@@ -556,9 +573,9 @@ label {
   text-decoration: underline;
 }
 
-.form-rememberme-box{
+.checkbox{
  display: flex;
- width: 40%;
+ align-items: center;
 
 }
 
@@ -580,10 +597,15 @@ label {
  
 }
 
+#rememberMe{
+  height:1.4rem;
+  width:1.4rem;
+}
 
 .form-options label {
   width:100%;
- 
+  display: flex;
+  align-items: center;
   
 }
 
@@ -604,16 +626,22 @@ label {
   background-color: #4c73e0;
 }
 
-
+.introduction-content-container{
+ display: flex;
+ gap:2%;
+ width:100%;
+ justify-content: flex-start;
+}
 
 .introduction-content{
   align-self:flex-end;
   position: relative;
   font-size: 1.1rem;
+  right:16%;
 }
 
 .introduction-content h2{
-  color:#0046FF;
+  color:#0C87F0;
   font-weight: 600;
 }
 
@@ -623,9 +651,12 @@ label {
 }
 .forgot-password-form-title{
   position: relative;
-  left:45%;
+  left:42%;
   top:5rem;
   color:#0046FF;
+}
+.forgot-password-form-title b{
+  font-size: 1.7rem !important;
 }
 .login-page-container b{
   width:10%;
@@ -642,7 +673,7 @@ label {
 /* Responsive Styles */
 @media (max-width: 3000px) {
   .login-form {
-      width: 80%;
+      width: 100%;
       height:40%;
 
   }
@@ -673,14 +704,29 @@ label {
   
 }
 
+.password-vertical-line {
+  position: absolute;
+  top: 70%;
+  right: 10%; /* Adjust this value as needed to position the line */
+  height: 50%;
+  width: 1.5px;
+  background-color: #ccc; /* Adjust color to match your design */
+  transform: translateY(-50%);
+}
+
+@media (max-width: 2800px) {
+
+}
+
 
 /* Responsive Styles */
 @media (max-width: 2400px) {
   .login-form {
-      width: 80%;     
+      width: 100%;     
       height:36%;
  
   }
+
   label {
     font-size: 1.4rem;
   }
@@ -714,6 +760,7 @@ label {
   .login-form {
       width: 80%;
   }
+ 
   label {
     font-size: 1.3rem;
   }
@@ -736,7 +783,7 @@ label {
     max-width:55rem;
   }
   .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 30%, transparent 30%);
+    background: radial-gradient(circle at top right, #0046FF 28%, transparent 28%);
   }
  
 }
@@ -744,7 +791,7 @@ label {
 
 @media (max-width: 1440px) {
   .login-form {
-      width: 80%;
+      width: 100%;
       height:65%;
   }
   label {
@@ -753,6 +800,7 @@ label {
   .login-form-title{
     font-size: 1.7rem;
   }
+
   .submit{
     font-size: 1.05rem;
   }
@@ -769,7 +817,7 @@ label {
     max-width: 35rem;
   }
   .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 28%, transparent 28%);
+    background: radial-gradient(circle at top right, #0046FF 22%, transparent 22%);
   }
   
 }
@@ -777,9 +825,10 @@ label {
 
 @media (max-width: 1024px) {
   .login-form {
-      width: 80%;
+      width: 100%;
       height:50%;
   }
+
   label {
     font-size: 1.1rem;
   }
@@ -802,7 +851,7 @@ label {
     max-width:50rem;
   }
   .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 25%, transparent 25%);
+    background: radial-gradient(circle at top right, #0046FF 18%, transparent 18%);
   }
  
 }
@@ -812,6 +861,7 @@ label {
       width: 70%;
       height:40%;
   }
+
   label {
     font-size: 1rem;
   }
@@ -832,7 +882,7 @@ label {
   }
 
   .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 18%, transparent 18%);
+    background: radial-gradient(circle at top right, #0046FF 15%, transparent 15%);
   }
   
  
@@ -862,7 +912,7 @@ label {
     font-size:1rem;
   }
   .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 15%, transparent 15%);
+    background: radial-gradient(circle at top right, #0046FF 12%, transparent 12%);
   }
 
   

@@ -32,6 +32,16 @@
 				console.error("Submit button not found!");
 			}
 		});
+
+		document.addEventListener("DOMContentLoaded", function() {
+			const element = document.querySelector("body > div > div.login-page-quarter-circle > div.alert.alert-error > div > span")
+            if (element) {
+                element.textContent = "Invalid username or password. Try again";
+            }
+        });
+
+		
+
 	</script>
 <body class="${properties.kcBodyClass!}">
 	<div class="login-page-container">
@@ -43,19 +53,23 @@
 				</div>	
 
 			<div>
-			<#if displayMessage && message?has_content>
-				<div class="alert alert-${message.type}">
-				<#if message.type = ' success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
-				<#if message.type='warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
-				<#if message.type='error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
-				<#if message.type='info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
-				<span class="message-text">${message.summary?no_esc}</span>
-			</div>
-			</#if>
+			
             <div class="forgot-password-form-title">		
 				<b><#nested "header"></b>
 			</div>
 			<#nested "form" >
+			 <#if displayMessage && message?has_content>
+				<div class="alert alert-${message.type}">
+					<#if message.type = ' success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
+					<#if message.type='warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
+					<#if message.type='error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
+					<#if message.type='info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
+
+					<div class="alert-message-icon-div">
+						<img src="${url.resourcesPath}/img/erroragain.svg" alt="img"/><span class="message-text">${message.summary?no_esc}</span>
+					</div>
+				</div>
+			</#if>
 			
 			</div>
 			<div class="rights">
