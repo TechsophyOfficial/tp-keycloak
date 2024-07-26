@@ -41,7 +41,19 @@
 <div class="full-height welcome">
     <div style="height:100vh; position: relative;">
         <img src="${url.resourcesPath}/img/emp360techsophylogo.svg" alt="techsophy360" style="width: 30%; position: absolute; bottom: 3%; left: 50%; transform: translateX(-50%);" />
-        <img src="${url.resourcesPath}/img/emp360leftText.svg" alt="text" style="width:3%;position:absolute; top:70%; right: 3%; transform: translateY(-50%);" />
+        <img 
+  src="${url.resourcesPath}/img/emp360leftText.svg" 
+  alt="text" 
+  style="
+    width: 3%; 
+    position: absolute; 
+    top: 45%; 
+    left: 2.5%; 
+    transform: translateY(-50%) rotate(180deg); 
+    transform-origin: center;
+  " 
+/>
+
     </div>
 </div>
 

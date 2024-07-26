@@ -505,7 +505,7 @@ a.zocial {
 }
 
 .welcome {
-  background-image: url(../img/emp360BG.svg);
+  background-image: url(../img/emp360loginBG.jpg);
   background-color: linear-gradient(180deg, #d9d9d9 0%, #090d2d 100%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -947,7 +947,7 @@ form#kc-select-back-form div.login-pf-social-section {
     border-radius: 10px;
   }
   .login-pf-page {
-    background-image: url(../img/emp360BG.svg);
+    background-image: url(../img/emp360loginBG.jpg);
     background-color: linear-gradient(180deg, #d9d9d9 0%, #090d2d 100%);
     background-size: cover;
     background-repeat: no-repeat;
