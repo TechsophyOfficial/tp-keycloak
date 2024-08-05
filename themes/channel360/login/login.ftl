@@ -36,6 +36,13 @@
                                         <input id="usericon" class="login-field" placeholder="${msg("username")}" type="text" name="username" tabindex="1">
                                         <#-- <div><label class="visibility" id="v" onclick="togglePassword()"><img id="vi" src="${url.resourcesPath}/img/eye-off.png"></label></div> -->
                                         <input id="password" class="login-field passwordicon" placeholder="${msg("password")}" type="password" name="password" tabindex="2">
+                                        <#if recaptchaRequired??>
+                                         <div class="form-group">
+                                          <div class="${properties.kcInputWrapperClass!}">
+                                            <div class="g-recaptcha" data-size="compact" data-sitekey="${recaptchaSiteKey}"></div>
+                                          </div>
+                                         </div>
+                                         </#if>
                                         <input class="submit" type="submit" value="Login" tabindex="3">
                                     </form>
                                 </div>

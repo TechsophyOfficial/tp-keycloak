@@ -10,3 +10,4 @@ COPY standalone/deployments/ts_awgment_user_register_spi.jar /opt/jboss/keycloak
 COPY standalone/deployments/providers/ /opt/jboss/keycloak/standalone/deployments/providers/
 COPY imports/ /opt/jboss/keycloak/imports/
 ADD config/standalone.xml /opt/jboss/keycloak/standalone/configuration/standalone.xml
+COPY standalone/deployments/recaptcha-login.jar /opt/jboss/keycloak/standalone/deployments/recaptcha-login.jar
