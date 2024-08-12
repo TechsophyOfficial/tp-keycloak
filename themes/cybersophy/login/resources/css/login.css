@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
- 
-
+/* Base Styles */
 body,
 html {
   display: flex;
@@ -8,1144 +6,338 @@ html {
   flex: 1;
   overflow: hidden;
   min-height: 0;
-  font-size: 14px;
+  font-size: 14px; /* Base font size */
   color: rgba(0, 0, 0, 0.87);
   margin: 0;
   height: 100%;
-  font-family: "Inter", sans-serif !important;
-}
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif !important;
-
+  font-family: "Inter", sans-serif; /* Apply Inter font to the entire document */
 }
 
-.login-form-and-content-box{
-  display: flex;
-
-}
-.login-page-container{
-  position: relative;
-  height: 100%;
-  width: 100%;
-  
-}
-
-.login-page-quarter-circle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%; /* Adjust the width and height as needed */
-  height: 100%;
-  /* border-top-left-radius: 10rem; */
-  background: radial-gradient(circle at top right, #0046FF 20%, transparent 20%);
-
-
+/* Container Styles */
+.login-page-container {
+  background: radial-gradient(circle at top right, #0046FF 20%, transparent 30%);
+  width: 100%; 
+  height: 100%; 
+  box-sizing: border-box; 
+  position: relative;      /* Positioning context for absolute children */
+  display: flex;           /* Enable Flexbox on the container */
+  flex-direction: column;  /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center;
+  overflow: hidden;        /* Ensure no overflow outside the container */
 }
 
-.box {
-  padding: 1rem;
-  /* margin: 0 10px; */
-  border-radius: 10px;
-  text-align: center;  
-  height:90%
 
-}
 
-.logo-container{
-  padding:1rem;
-}
-.logo{
-  width:20%
-}
-
+/* Logo Styles */
 .login-page-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-
+  position: absolute;      /* Absolute positioning for top-center alignment */
+  top: 1rem;               /* Margin from the top */
+  left: 50%;               /* Center horizontally */
+  transform: translateX(-50%); /* Adjust horizontal position to be centered */
 }
 
-
-.box form input {
-  padding: 1.4rem;
-  box-sizing: border-box;
+.logo {
+  min-width: 15rem;        /* Minimum width of the logo in rems */
+  max-width: 40rem;        /* Increase maximum width of the logo in rems */
+  height: auto;            /* Maintain aspect ratio */
 }
 
-.box form button {
-  padding: 10px;
-  width: 100%;
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.box form button:hover {
-  background-color: #1976d2;
-}
-
-.login-content .box .application-name {
-  font-family: "Inter", sans-serif !important;  font-size: 35px;
-  font-weight: 300px;
-  font-style: normal;
-  line-height: 21px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  color: #000036;
-}
-.login-content .box .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-.login-content .box .login-field {
-  width: 100%;
-  height: 35px;
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: -0.4px;
-  /* text-align: center; */
-  color: #000000;
-  border: none;
-  border: 1px solid #bcbcbc;
-  border-radius: 20px;
-  outline: none;
-  background-color: #fff;
-  padding-left: 35px;
-}
-.login-content .box input[type="text"]:focus,
-.login-content .box input[type="password"]:focus {
-  border-bottom: 2px solid #000036;
-}
-
-
-.login-content .box input[type="text"]:-webkit-autofill,
-.login-content .box input[type="password"]:-webkit-autofill {
-  box-shadow: 0 0 0px 1000px white inset;
-}
-.login-content .box .submit {
-  width: 147px;
-  height: 40px;
-  border-radius: 50px;
-  background-color: #016beb;
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
-  border-style: none;
-  cursor: pointer;
-}
-.login-content .box .visibility {
-  position: relative;
-  left: 296px;
-  top: 20px;
-  width: 24px;
-  height: 24px;
-  opacity: 0.54;
-  border: none;
-}
-.login-content .box .copyright {
-  position: relative;
-  color: #4d4d4d99;
-  font-family: "Inter", sans-serif !important;  font-style: normal;
-  font-weight: 400;
-  margin: unset;
-}
-
-
-
-.message-text {
-  opacity: 0.87;
-  font-family: "Inter", sans-serif !important;  font-size: 1.2rem;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  color: #FF0000;
-  margin-left: 10px;
-  border: 0px;   
- 
-}
-.identity-providers {
-  width: 270px;
-  font-family: "Inter", sans-serif !important;  font-size: 16px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 0.83;
-  letter-spacing: -0.4px;
-  text-align: left;
-  color: #0055b8;
-  margin-left: 32px;
-  margin-top: 20px;
-}
-
-.login-content .box .social-link-style {
-  width: 320px;
-  height: 36px;
-  border-radius: 2px;
-  background-color: var(--white);
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #f26922;
-  border-style: solid;
-  border-color: #f26922;
-  /* margin-top: 0px; */
-  /* margin-bottom: 10px; */
-}
-
-.login-content .box .para {
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  margin-left: 30px;
-}
-
-.login-content .box .application-data {
-  text-align: center;
-}
-
-#usericon {
-  background-image: url(../img/User.png);
-  background-repeat: no-repeat;
-  background-position: 9px 10px;
-}
-
-.passwordicon {
-  background-image: url(../img/Password.png);
-  background-repeat: no-repeat;
-  background-position: 9px 10px;
-}
-
-.loginHeading-image {
-  height: 25px;
-  width: 20px;
-}
-
-/* .application-subHeading {
-} */
-
-.box1 {
-  width: 70%;
-  height: auto;
-  background: linear-gradient(180deg, #378ad8 0%, rgba(133, 131, 131, 0) 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items:center;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;
-  color:#FFFFFF;
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Inter", sans-serif !important;  height: 30%;
-
-}
-.header h1{
-  font-weight: 400;
-  font-style: normal;
-}
-.header h2{
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.copyright {
-  font-family: "Inter", sans-serif !important;  text-align: center;
-  color: gray;
-}
-
-.log-container {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: "Inter", sans-serif !important;}
-
-
+/* Copy rights text */
 .rights {
-  width: 45%;
   position: absolute;
-  bottom: 1%;
-}
-
-
-/* update form styles */
-.login-page-quarter-circle .form-horizontal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-  left:16%;
-  top:8rem;
-}
-.login-page-quarter-circle .form-horizontal input{
- width: 45%;
- border-radius: 1rem;
-}
-
-#kc-form-buttons input[type="submit"] {
- width: 49%;
-}
-
-.form-group .form-control {
-  height: 35px;
-  width: 100%;
-  font-family: "Inter", sans-serif !important;  font-size: 0.875rem;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: -0.4px;
-  color: #000000;
-  border: none;
-  border: 1px solid #bcbcbc;
-  border-radius: 20px;
-  outline: none;
-  background-color: #fff;
-  padding-left: 25px;
-}
-/* #password-new::before{
-  content: "New Password";
-  color: #000000;
-} */
-span {
-  font-family: "Inter", sans-serif !important;}
-a{
-  text-decoration: none;
-  color: #0046FF;
-  font-size: 1rem;
-  font-weight:600;
-}
-label{
-  font-family: "Inter", sans-serif !important;  font-size: 1rem;
-  color: #0046FF !important;
-
-}
-
-h2{
-  color:#0046FF !important
-}
-
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  font-family: "Inter", sans-serif !important;
-}
-.control-label {
-  padding-left: 3px;
-  color:#0046FF;
-  font-weight:500;
-}
-.form-group .btn-lg {
-  width: 147px;
-  height: 40px;
-  border-radius: 50px;
-  background-color: #016beb;
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
-  border-style: none;
-  cursor: pointer;
-}
-#kc-form-buttons {
-  display: flex;
-  justify-content: flex-start;
-  
-}
-
-
-#kc-form-options {
-  margin-top: -10px;
-  /* margin-bottom: 15px; */
-  
-}
-#kc-form-options span{
-  font-size: 0.9rem !important;
-  padding-left: 0.4rem;
-}
-#kc-form-options a{
-  position: absolute;
- top:105%;
- right:62%
-
-}
-
-.log-container b {
-  font-family: "Inter", sans-serif !important;  font-size: 1.5rem;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 21px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
-  /* margin-bottom: 5%; */
+  bottom: 1rem; /* Adjust as needed */
   text-align: center;
-}
-
-.login-content .box .box-container {
-  transform: scale(1);
-}
-
-
-.form-group div span {
-  color: red;
-  padding-left: 1rem;
-  font-size: 0.7rem;
-}
-
-.box-container{
-  display: flex;
-  height:75vh;
-  
-}
-
-.login-form-container{
-   width:70%;
-   display: flex;
-   padding-left: 5%;
-   flex-direction: column;
-   align-items: flex-start;
-   height:50%;   
-   
+  font-size: 0.875rem; /* Adjust font size as needed */
+  align-items: center;
 }
 
 
-
-
-
-.login-form-title{
-  font-size: 2rem !important;
+.font-text-blue {
   color:#0046FF;
-  font-weight: 600;
-  padding-left: 3.2rem !important;
+    /* background: linear-gradient(0deg, #0C87F0, #0C87F0),
+                linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; For non-WebKit browsers */
 }
 
-.form-input-container {
+.main-container {
+  box-sizing: border-box;
+  /* border: solid 2px blue; */
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1%;
-}
-
-.kc-register-form{
-  overflow: auto;
-}
-
-.form-input-container input {
-  border: 1px solid #ccc;
-  border-radius: 1rem;
-  width:100%
-}
-
-.form-input-container label{
-  margin-bottom: 0.6rem;
-  color:#0C87F0;
-  font-weight: 500;
+  flex-direction: row;
+  width: 90%;
+  /* padding: 5rem 5rem 5rem 5rem; */
+  justify-content: flex-end; /* Centers content horizontally within the container */
+  align-items: flex-end; /* Centers content vertically within the container */
+  position: absolute; /* Position the container relative to the viewport */
+  top: 55%; /* Move the container down 50% of the viewport height */
+  left: 50%; /* Move the container right 50% of the viewport width */
+  transform: translate(-50%, -50%); /* Offset the container to center it exactly */
 }
 
 
-.password-field {
-  position: relative;
-}
-
-.password-input {
-  padding-right: 40px;
-}
-
-.password-toggle {
-  position: absolute;
-  right: 10px;
-  top: 65%;
-  transform: translateY(-50%);
-  cursor: pointer;
-
-}
-
-.form-options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5% 0 5% 0;
-  
-}
-
-.forgot-password{
-  font-family: "Inter", sans-serif !important;
-  text-decoration: underline;
-}
-
-.checkbox{
- display: flex;
- align-items: center;
-
-}
+/* Form Stylings */
 
 
-.form-options .form-rememberme-box label{
-  color:#8D8D8D;
-  width:500px;
-
-}
-
-.form-options .form-rememberme-box input{
-  width:5rem;
-  height:2rem
-}
-
-.form-options div {
-  display: flex;
-  align-items: center;
- 
-}
-
-#rememberMe{
-  height:1.4rem;
-  width:1.4rem;
-}
-
-.form-options label {
-  width:100%;
-  display: flex;
-  align-items: center;
-  
-}
-
-.submit {
-  width: 100%;
-  padding: 10px;
-  background-color: #0046FF;
-  color: white;
-  border: none;
-  border-radius: 1.2rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-
-}
-
-.submit:hover {
-  background-color: #4c73e0;
+.login-form-container {
+    width: 60%;
+    /* border: solid 2px magenta;   */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem; /* Add padding on the right as well */
+    padding-bottom: 2rem; /* Add padding at the bottom */
+    box-sizing: border-box; /* Ensure padding is included in the container's width */
+    min-height: 400px; /* Set a minimum height for the container */
 }
 
 .introduction-content-container{
-  position: fixed; /* or absolute, depending on your layout needs */
-  bottom: 0%;
-  right: 1%;
-  max-width: 500px;
-  width:100%;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    /* border: solid 2px red; */
+    width: fit-content;
+    display: flex;
+    flex-direction: column; /* Ensure the content inside is laid out vertically */
+    justify-content: center; /* Align content at the bottom */
+    height: 100%; /* Make sure the container takes up the full available height */
+    padding: 0rem 4rem 0rem 4rem;
+    text-align: center;
+    align-items: center;
 }
 
-.introduction-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.form-input-container {
+    /* border: solid 2px red; */
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    position: relative; /* Relative positioning for positioning children */
+    /* border: solid 2px blue; */ 
 }
 
-.introduction-content h2{
-  color:#0C87F0;
-  font-weight: 600;
+/* Password Field */
+.password-field {
+    position: relative; /* Position relative to place the icon */
 }
 
-.introduction-content p{
-  color:#8D8D8D;
-  max-width: 30rem;
-}
-.forgot-password-form-title{
-  position: relative;
-  left:42%;
-  top:5rem;
-  color:#0046FF;
-}
-.forgot-password-form-title b{
-  font-size: 1.7rem !important;
-}
-.login-page-container b{
-  width:10%;
-  font-weight:600;
-  font-size:1.2rem;
+.password-input {
+    width: 100%;
+    height: 35px;
+    font-family: "Inter", sans-serif !important;
+    font-size: 1rem;
+    color: #4A5568;
+    border: 1px solid #8D8D8D;
+    border-radius: 12px;
+    outline: none;
+    background-color: #fff;
+    padding-left: 1rem;
+    padding-right: 2.5rem; /* Add padding on the right to make space for the icon */
 }
 
-.box-container span{
-  align-self: center;
+/* Password Toggle Icon */
+.password-toggle {
+    position: absolute;
+    padding: 0.5rem;
+    right: 0rem; /* Position the icon inside the input field, adjust as needed */
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    height: 24px; /* Adjust the size of the icon */
+    width: 24spx; /* Adjust the size of the icon */
+    border-left: solid 1px #CFD9E0;
 }
 
-
-.password-vertical-line {
-  position: absolute;
-  top: 70%;
-  right: 10%; /* Adjust this value as needed to position the line */
-  height: 50%;
-  width: 1.5px;
-  background-color: #ccc; /* Adjust color to match your design */
-  transform: translateY(-50%);
-}
-
-
-.kc-captcha{
-  margin-top: 1rem;
-}
-
-
-
-
-
-/* new css */
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
- 
-body,
-html {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  overflow: hidden;
-  min-height: 0;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.87);
-  margin: 0;
-  height: 100%;
-  font-family: "Inter", sans-serif !important;
-}
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif !important;
-
+/* Example styles for other elements (not changed) */
+.input-field {
+    width: 100%;
+    box-sizing: border-box;
+    height: 3.3rem;
+    font-family: "Inter", sans-serif !important;
+    font-size: 1rem;
+    color: #4A5568;
+    border: 1px solid #8D8D8D;
+    border-radius: 12px;
+    outline: none;
+    background-color: #fff;
+    padding-left: 1rem;
 }
 
 
-.login-page-container{
-  position: relative;
-  height: 100%;
-  width: 100%;
+.remember-me-div{
+    /* border: solid 1px red; */
+    display: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.submit-btn {
+    width: 100%;
+    /* padding: 10px; */
+    background-color: #0046FF;
+    color: white;
+    border: none;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 3.3rem;
+
+    box-shadow: 0px 13px 37px 0px #00000036;
+
   
-}
+  }
+  
+  .submit-btn:hover {
+    background-color: #4c73e0;
+  }
 
-.login-page-quarter-circle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%; /* Adjust the width and height as needed */
-  height: 150%;
-  /* border-top-left-radius: 10rem; */
-  background: radial-gradient(circle at top right, #0046FF 20%, transparent 20%);
+  .login-form-title{
+    font-size: 28px;
+    background: linear-gradient(358.9deg, #0046FF -6.03%, #0095FF 144.98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
 
+  .forgot-password-text{
+    color: #0046FF;
+  }
 
-}
-
-.box {
-  /* margin: 0 10px; */
-  border-radius: 10px;
-  text-align: center;  
-}
-
-.logo-container{
-  padding:1rem;
-}
-.logo{
-  width:20%
-}
-
-.login-page-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-
+.remember-me-text{
+    color: #8D8D8D !important;
 }
 
 
-.box form input {
-  padding: 1.4rem;
-  box-sizing: border-box;
-}
-
-.box form button {
-  padding: 10px;
-  width: 100%;
-  background-color: #2196f3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.box form button:hover {
-  background-color: #1976d2;
-}
-
-.login-content .box .application-name {
-  font-family: "Inter", sans-serif !important;
-    font-size: 35px;
-  font-weight: 300px;
-  font-style: normal;
-  line-height: 21px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
-  color: #000036;
-}
-.login-content .box .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-.login-content .box .login-field {
-  width: 100%;
-  height: 35px;
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: -0.4px;
-  /* text-align: center; */
-  color: #000000;
-  border: none;
-  border: 1px solid #bcbcbc;
-  border-radius: 20px;
-  outline: none;
-  background-color: #fff;
-  padding-left: 35px;
-}
-.login-content .box input[type="text"]:focus,
-.login-content .box input[type="password"]:focus {
-  border-bottom: 2px solid #000036;
-}
-
-
-.login-content .box input[type="text"]:-webkit-autofill,
-.login-content .box input[type="password"]:-webkit-autofill {
-  box-shadow: 0 0 0px 1000px white inset;
-}
-.login-content .box .submit {
-  width: 147px;
-  height: 40px;
-  border-radius: 50px;
-  background-color: #016beb;
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
-  border-style: none;
-  cursor: pointer;
-}
-.login-content .box .visibility {
-  position: relative;
-  left: 296px;
-  top: 20px;
-  width: 24px;
-  height: 24px;
-  opacity: 0.54;
-  border: none;
-}
-.login-content .box .copyright {
-  position: relative;
-  color: #4d4d4d99;
-  font-family: "Inter", sans-serif !important;  font-style: normal;
-  font-weight: 400;
-  margin: unset;
-}
-
-
-
-.message-text {
-  opacity: 0.87;
-  font-family: "Inter", sans-serif !important;  font-size: 1.2rem;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  color: #FF0000;
-  margin-left: 10px;
-  border: 0px; 
- 
-}
-.identity-providers {
-  width: 270px;
-  font-family: "Inter", sans-serif !important;  font-size: 16px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 0.83;
-  letter-spacing: -0.4px;
-  text-align: left;
-  color: #0055b8;
-  margin-left: 32px;
-  margin-top: 20px;
-}
-
-.login-content .box .social-link-style {
-  width: 320px;
-  height: 36px;
-  border-radius: 2px;
-  background-color: var(--white);
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #f26922;
-  border-style: solid;
-  border-color: #f26922;
-  /* margin-top: 0px; */
-  /* margin-bottom: 10px; */
-}
-
-.login-content .box .para {
-  font-family: "Inter", sans-serif !important;  font-size: 14px;
-  margin-left: 30px;
-}
-
-.login-content .box .application-data {
-  text-align: center;
-}
-
-#usericon {
-  background-image: url(../img/User.png);
-  background-repeat: no-repeat;
-  background-position: 9px 10px;
-}
-
-.passwordicon {
-  background-image: url(../img/Password.png);
-  background-repeat: no-repeat;
-  background-position: 9px 10px;
-}
-
-.loginHeading-image {
-  height: 25px;
-  width: 20px;
-}
-
-/* .application-subHeading {
-} */
-
-.box1 {
-  width: 70%;
-  height: auto;
-  background: linear-gradient(180deg, #378ad8 0%, rgba(133, 131, 131, 0) 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items:center;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items:center;
-  color:#FFFFFF;
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Inter", sans-serif !important;  height: 30%;
+.introducing-cyberwasp-text{
+    font-weight: 300;
+    width: 96%;
+    color: #8D8D8D;
+    text-align: center;
 
 }
-.header h1{
-  font-weight: 400;
-  font-style: normal;
-}
-.header h2{
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-.copyright {
-  font-family: "Inter", sans-serif !important;  text-align: center;
-  color: gray;
-}
-
-.log-container {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: "Inter", sans-serif !important;}
 
 
 .alert {
   text-align: center;
   position: absolute;
-  right:62%;
-  top:72%;
-}
-
-.rights {
-  width: 45%;
-  position: absolute;
-  bottom: 1%;
-
+  right:65%;
+  top:90%;
+  transform: translateY(-45%);
 }
 
 
-/* update form styles */
-.login-page-quarter-circle .form-horizontal {
+.alert-message-icon-div {
+    box-sizing: border-box;
+    margin-top: 2rem; /* Add some space above the error message */
+    border: none; /* Remove the border */
+    border-radius: 8px; /* Rounded corners for the container */
+    color: #ff0000; /* Red text color for error messages */
+    text-align: center; /* Center text inside the container */
+    width: fit-content; /* Set the width to 100% of the form container */
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center the content horizontally */
+    gap: 0.1rem;
+    /* margin-top: 37rem; */
+    /* transform: translate(-50%, -10%); */
+}
+
+.error-msg-icon {
+    margin-right: 0.5rem;   
+    height: 24px; /* Set the height of the icon */
+    width: 24px; /* Set the width of the icon */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.message-text {
+    flex: 1;       
+    border: none; /* Remove border if unnecessary */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    font-size: 1rem; /* Adjust font size as needed */
+    flex-grow: 1; /* Allow text to take up remaining space */
+  }
+
+.alert-message-icon-div-error {
+    box-sizing: border-box;
+   
+    margin-top: 0rem; /* Space above the error message */
+    margin-right: 0rem; /* Remove space to the right */
+    margin-left: 0rem; /* Ensure no space to the left */
+    /* border: solid 1px red; */
+    border-radius: 8px; /* Rounded corners for the container */
+    color: #ff0000; /* Red text color for error messages */
+    
+    width: auto; /* Adjust width to fit the content or container */
+    padding: 1rem; /* Add padding for better spacing inside the container */
+    text-align: left; /* Ensure text is aligned to the left */
+}
+
+.forgot-password-form-title{
+
+  font-size: larger;
+  /* border: solid 2px red; */
+  /* font-size: 28px; */
+  
+  background: linear-gradient(358.9deg, #0046FF -6.03%, #0095FF 144.98%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Forgot password */
+#kc-reset-password-form {
+ 
+  /* Basic Container Styles */
+  padding: 2rem; /* Padding inside the container */
+  min-width: 30%;
+  max-width: 40rem; /* Maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-  left:16%;
-  top:8rem;
-}
-.login-page-quarter-circle .form-horizontal input{
- width: 45%;
- border-radius: 1rem;
+  gap: 2rem;
 }
 
-#kc-form-buttons input[type="submit"] {
- width: 49%;
+.control-label {
+
+  color:#0046FF;
+
+  /* background: linear-gradient(0deg, #0C87F0, #0C87F0),
+              linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;  */
+
 }
 
-.form-group .form-control {
-  height: 35px;
+.form-horizontal input{
   width: 100%;
-  font-family: "Inter", sans-serif !important;  font-size: 0.875rem;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: -0.4px;
-  color: #000000;
-  border: none;
-  border: 1px solid #bcbcbc;
-  border-radius: 20px;
+  box-sizing: border-box;
+  height: 3.3rem;
+  font-family: "Inter", sans-serif !important;
+  font-size: 1rem;
+  color: #4A5568;
+  border: 1px solid #8D8D8D;
+  border-radius: 12px;
   outline: none;
   background-color: #fff;
-  padding-left: 25px;
-}
-/* #password-new::before{
-  content: "New Password";
-  color: #000000;
-} */
-span {
-  font-family: "Inter", sans-serif !important;}
-a{
-  text-decoration: none;
-  color: #0046FF;
-  font-size: 1rem;
-  font-weight:600;
-}
-label {
-  font-family: "Inter", sans-serif !important;  font-size: 1rem;
-}
-
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  font-family: "Inter", sans-serif !important;
-}
-.control-label {
-  padding-left: 3px;
-  color:#0046FF;
-  font-weight:500;
-}
-.form-group .btn-lg {
-  width: 147px;
-  height: 40px;
-  border-radius: 50px;
-  background-color: #016beb;
-  font-family: "Inter", sans-serif !important;  font-size: 0.8rem;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
-  border-style: none;
-  cursor: pointer;
-}
-#kc-form-buttons {
-  display: flex;
-  justify-content: flex-start;
-  
-}
-
-
-#kc-form-options {
-  margin-top: -10px;
-  /* margin-bottom: 15px; */
-  
-}
-#kc-form-options span{
-  font-size: 0.9rem !important;
-  padding-left: 0.4rem;
-}
-#kc-form-options a{
-  position: absolute;
- top:105%;
- right:62%
-
-}
-
-.log-container b {
-  font-family: "Inter", sans-serif !important;  font-size: 1.5rem;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 21px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000000;
-  /* margin-bottom: 5%; */
-  text-align: center;
-}
-
-.login-content .box .box-container {
-  transform: scale(1);
-}
-
-
-.form-group div span {
-  color: red;
   padding-left: 1rem;
-  font-size: 0.7rem;
-}
+  margin-top: 1rem;
+ }
 
-
-.box-container{
-  display: flex;
-  height:75vh;
-}
-
-
-.login-form {
-  width: 50%;
-  padding: 0% 5% 8% 5% !important;
-  border-radius: 10px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  display: flex;
-  flex-direction: column;
-  height:50%;
-  justify-content: space-around;
-}
-
-
-
-.login-form-title{
-  font-size: 2rem !important;
-  color:#0046FF;
-  font-weight: 600;
-  padding-left: 2.2rem;
-}
-
-
-.password-field {
-  position: relative;
-}
-
-.password-input {
-  padding-right: 40px;
-}
-
-.password-toggle {
-  position: absolute;
-  right: 10px;
-  top: 65%;
-  transform: translateY(-50%);
-  cursor: pointer;
-
-}
-
-.form-options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5% 0 5% 0;
-  
-}
-
-.forgot-password{
-  font-family: "Inter", sans-serif !important;  text-decoration: underline;
-}
-
-.checkbox{
- display: flex;
- align-items: center;
-
-}
-
-
-.form-options .form-rememberme-box label{
-  color:#8D8D8D;
-  width:500px;
-
-}
-
-.form-options .form-rememberme-box input{
-  width:5rem;
-  height:2rem
-}
-
-.form-options div {
-  display: flex;
-  align-items: center;
- 
-}
-
-#rememberMe{
-  height:1.4rem;
-  width:1.4rem;
-}
-
-.form-options label {
-  width:100%;
-  display: flex;
-  align-items: center;
-  
-}
-
-.submit {
+ #kc-form-buttons input[type="submit"] {
   width: 100%;
-  padding: 10px;
+  /* padding: 10px; */
   background-color: #0046FF;
   color: white;
   border: none;
@@ -1153,355 +345,148 @@ label {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
-
-}
-
-.submit:hover {
-  background-color: #4c73e0;
-}
-
-.forgot-password-form-title{
-  position: relative;
-  left:42%;
-  top:5rem;
-  color:#0046FF;
-}
-.forgot-password-form-title b{
-  font-size: 1.7rem !important;
-}
-.login-page-container b{
-  width:10%;
-  font-weight:600;
-  font-size:1.2rem;
-}
-
-.box-container span{
-  align-self: center;
-}
-
-
-.password-vertical-line {
-  position: absolute;
-  top: 70%;
-  right: 10%; /* Adjust this value as needed to position the line */
-  height: 50%;
-  width: 1.5px;
-  background-color: #ccc; /* Adjust color to match your design */
-  transform: translateY(-50%);
-}
-
-.recaptcha{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left:0.2rem;
-
-}
+  height: 3.3rem;
+  box-shadow: 0px 13px 37px 0px #00000036;
+ }
+ 
 
 
 
-@media only screen and (min-width: 2001px) and (max-width: 3000px) {
-  .introduction-content-container{
-    max-width: 500px;
+
+/* Media Queries */
+
+/* Mobile Devices (Portrait) */
+@media (max-width: 480px) {
+  body,
+  html {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  .login-page-container {
+    background: radial-gradient(circle at top right, #0046FF 2%, transparent 2%); /* Adjust gradient for smaller screens */
+    border-width: 3px; /* Smaller border for mobile devices */
+  }
+
+  .logo {
+    max-width: 25rem;  /* Adjust logo size for mobile devices */
+  }
+
+  .rights {
+    font-size: 0.75rem; /* Smaller font size for mobile devices */
   }
 }
 
+/* Mobile Devices (Landscape) and Tablets (Portrait) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body,
+  html {
+    font-size: 13px; /* Adjust font size for medium screens */
+  }
 
-@media only screen and (min-width: 1440px) and (max-width: 2000px) {
-  .introduction-content-container{
-    max-width: 600px;
+  .login-page-container {
+    background: radial-gradient(circle at top right, #0046FF 18%, transparent 18%); /* Adjust gradient for tablets */
+    border-width: 4px; /* Slightly larger border for tablets */
+  }
+  .alert{
+    top:100%
+  }
+
+  .logo {
+    max-width: 30rem;  /* Increase logo size for tablets */
+  }
+
+  .rights {
+    font-size: 0.8rem; /* Adjust font size for tablets */
   }
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1399px) {
-  .introduction-content-container{
-    max-width: 400px;
+/* Tablets (Landscape) and Small Desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body,
+  html {
+    font-size: 14px; /* Default font size for tablets and small desktops */
+  }
+
+  .login-page-container {
+    background: radial-gradient(circle at top right, #0046FF 20%, transparent 20%); /* Default gradient */
+    border-width: 5px; /* Default border size */
+  }
+  .alert{
+    top:85%
+  }
+  .logo {
+    max-width: 35rem;  /* Increase logo size for tablets and small desktops */
+  }
+
+  .rights {
+    font-size: 0.875rem; /* Default font size for tablets and small desktops */
   }
 }
 
+/* Desktops and Larger Screens */
+@media (min-width: 1025px) {
+  body,
+  html {
+    font-size: 16px; /* Larger font size for bigger screens */
+  }
 
+  .login-page-container {
+    background: radial-gradient(circle at top right, #0046FF 22%, transparent 22%); /* Default gradient */
+    border-width: 5px; /* Default border size for larger screens */
+  }
 
-/* Responsive Styles */
-@media only screen and (max-width: 3000px) {
-  .login-form {
-      width: 50%;
-      /* height:40%; */
+  .alert{
+    top:90%
   }
-  label {
-    font-size: 1.5rem;
-  }
-  .login-form-title{
-    font-size: 2rem;
 
+  .logo {
+    max-width: 40rem;  /* Increase logo size for larger screens */
   }
-  .submit{
-    font-size: 1.4rem;
+
+  .rights {
+    font-size: 1rem; /* Larger font size for larger screens */
   }
-  a{
-    font-size: 1.4rem;
-  }
-  .login-page-container b{
-    font-size:1.4rem;
-  }
-  .introduction-content-container{
-    max-width: 800px;
-  }
-  .introduction-content{
-    font-size:2.4rem;
-  }
-  .introduction-content p{
-    max-width: 60rem;
-  }
-  .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 20%, transparent 20%);
-  }
-  /* .alert {
-    top:40%;
-    right:70%;
-  } */
 }
 
-@media only screen and (max-width: 2800px) {
-  /* .alert {
-    top:42%;
-    right:70%;
-  } */
-}
+/* Large Desktops and Ultra-Wide Screens */
+@media (min-width: 1440px) {
+  body,
+  html {
+    font-size: 18px; /* Increase font size for ultra-wide screens */
+  }
 
+  .login-page-container {
+    background: radial-gradient(circle at top right, #0046FF 25%, transparent 25%); /* Adjust gradient for larger screens */
+    border-width: 6px; /* Slightly larger border for larger screens */
+  }
 
-/* Responsive Styles */
-@media only screen and (max-width: 2400px) {
-  /* .alert {
-    top:38%;
-    right:70%;
-  } */
-  .login-form {
-      /* height:36%; */
+  .alert{
+    top:90%;
+    
+  }
+  .login-page-logo {
+    top: 4rem;               /* Margin from the top */
  
   }
 
-  label {
-    font-size: 1.4rem;
-  }
-  .login-form-title{
-    font-size: 1.9rem;
-  }
-  .submit{
-    font-size: 1.2rem;
-  }
-  a{
-    font-size: 1.2rem;
-  }
-  .login-page-container b{
-    font-size:1.25rem;
-  }
-  .introduction-content{
-    font-size:2.2rem;
-  }
-  .introduction-content p{
-    max-width:60rem;
-  }
-  .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 20%, transparent 20%);
-  }
-  
-}
-
-
-/* Responsive Styles */
-@media only screen and (max-width: 2000px) {
-  /* .alert {
-    top:48%;
-    right:70%;
-    border:1px solid red
-  } */
-
-  label {
-    font-size: 1.3rem;
-  }
-  .login-form-title{
-    font-size: 1.8rem;
-  }
-  .submit{
-    font-size: 1.1rem;
-  }
-  a{
-    font-size: 1.1rem;
-  }
-  .login-page-container b{
-    font-size:1.2rem;
-  }
-  .introduction-content{
-    font-size:1.5rem;
-  }
-  .introduction-content p{
-    max-width:55rem;
-  }
-  .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 20%, transparent 20%);
-  }
- 
-}
-
-
-@media only screen and (min-width: 1201px) and (max-width: 1440px) {
-  /* .alert {
-    top:70%;
-    right:65%;
-  } */
-  .login-form {
-      /* height:60%; */
-  }
-  label {
-    font-size: 1.2rem;
-  }
-  .login-form-title{
-    font-size: 1.7rem;
+  .logo {
+    max-width: 50rem;  /* Increase logo size for ultra-wide screens */
   }
 
-  .submit{
-    font-size: 1.05rem;
-  }
-  a{
-    font-size: 1.05rem;
-  }
-  .login-page-container b{
-    font-size:1.15rem;
-  }
-  .introduction-content{
-    font-size:1.4rem;
-  }
-  .introduction-content p{
-    max-width: 35rem;
-  }
-  .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 20%, transparent 20%);
-  }
-  
-}
-
-@media only screen and (min-width: 1151px) and (max-width: 1200px) {
-  /* .alert {
-    top:70%;
-    right:64%;
-  } */
-
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1150px) {
-  /* .alert {
-    top:50%;
-    right:64%;
-  } */
-
-}
-
-
-
-@media only screen and (max-width: 1024px) {
-  .login-form {
-      /* height:40%; */
-      
-  }
-
-  label {
-    font-size: 1.1rem;
-  }
-  .login-form-title{
-    font-size: 1.1rem;
-  }
-  .submit{
-    font-size: 1.02rem;
-  }
-  a{
-    font-size: 1.02rem;
-  }
-  .login-page-container b{
-    font-size:1.1rem;
-  }
-  .introduction-content{
-    font-size:1.2rem;
-  }
-  .introduction-content p{
-    max-width:50rem;
-  }
-  .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 18%, transparent 18%);
-  }
- 
-}
-
-@media only screen and (max-width: 768px) {
-  .login-form {
-      /* height:40%; */
-  }
-
-  label {
-    font-size: 1rem;
-  }
-  .login-form-title{
-    font-size: 1.5rem;
-  }
-  .submit{
-    font-size: 1rem;
-  }
-  a{
-    font-size: 1rem;
-  }
-  .login-page-container b{
-    font-size:1.05rem;
-  }
-  .introduction-content{
-    font-size:1rem;
-  }
-
-  .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 15%, transparent 15%);
-  }
-  
- 
-}
-
-@media only screen and (max-width: 480px) {
-  .login-form {
-      /* height:10%; */
-    }
-  label {
-    font-size: 1rem;
-  }
-  .login-form-title{
-    font-size: 1.4rem;
-  }
-  .submit{
-    font-size: 1rem;
-  }
-  a{
-    font-size: 1rem;
-  }
-  .login-page-container b{
-    font-size:1rem;
-  }
-  .introduction-content{
-    font-size:1rem;
-  }
-  .login-page-quarter-circle {
-    background: radial-gradient(circle at top right, #0046FF 12%, transparent 12%);
-  }
-
-  
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  .introduction-content-container{
-    max-width: 500px;
+  .rights {
+    font-size: 1.2rem; /* Larger font size for ultra-wide screens */
   }
 }
 
-
-
-@media only screen and (min-width: 1440px) and (max-width: 1822px) {
-  .introduction-content-container{
-    max-width: 500px;
-  }
+/* Font Variations */
+.inter-light {
+  font-weight: 100;
 }
 
+.inter-regular {
+  font-weight: 400;
+}
 
+.inter-bold {
+  font-weight: 700;
+}
