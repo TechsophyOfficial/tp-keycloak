@@ -5,7 +5,7 @@ html {
   flex-direction: column;
   flex: 1;
   overflow: hidden;
-  min-height: 0;
+  min-height: 100%;
   font-size: 14px; /* Base font size */
   color: rgba(0, 0, 0, 0.87);
   margin: 0;
@@ -25,6 +25,7 @@ html {
   align-items: center; /* Center items horizontally */
   justify-content: center;
   overflow: hidden;        /* Ensure no overflow outside the container */
+ 
 }
 
 
@@ -64,53 +65,48 @@ html {
 
 .main-container {
   box-sizing: border-box;
-  /* border: solid 2px blue; */
   display: flex;
   flex-direction: row;
   width: 90%;
-  /* padding: 5rem 5rem 5rem 5rem; */
-  justify-content: flex-end; /* Centers content horizontally within the container */
-  align-items: flex-end; /* Centers content vertically within the container */
-  position: absolute; /* Position the container relative to the viewport */
-  top: 55%; /* Move the container down 50% of the viewport height */
-  left: 50%; /* Move the container right 50% of the viewport width */
-  transform: translate(-50%, -50%); /* Offset the container to center it exactly */
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
 }
-
-
-/* Form Stylings */
-
 
 .login-form-container {
-    width: 60%;
-    /* border: solid 2px magenta;   */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem; /* Add padding on the right as well */
-    padding-bottom: 2rem; /* Add padding at the bottom */
-    box-sizing: border-box; /* Ensure padding is included in the container's width */
-    min-height: 400px; /* Set a minimum height for the container */
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
 }
+
+.recaptcha {
+  min-height:78px;
+  width: 100%;  /* Ensures it spans the container width */
+}
+
 
 .introduction-content-container{
     margin-bottom: 2rem;
     box-sizing: border-box;
-    /* border: solid 2px red; */
-    width: fit-content;
+    width: 70%;
     display: flex;
     flex-direction: column; /* Ensure the content inside is laid out vertically */
     justify-content: center; /* Align content at the bottom */
     height: 100%; /* Make sure the container takes up the full available height */
-    padding: 0rem 4rem 0rem 4rem;
+    padding: 0rem 4rem;
     text-align: center;
     align-items: center;
 }
 
 .form-input-container {
-    /* border: solid 2px red; */
     box-sizing: border-box;
     width: 100%;
     display: flex;
@@ -189,7 +185,7 @@ html {
     font-size: 1rem;
     font-weight: 600;
     height: 3.3rem;
-
+    margin-bottom: 3rem;
     box-shadow: 0px 13px 37px 0px #00000036;
 
   
@@ -236,7 +232,6 @@ html {
 
 .alert-message-icon-div {
     box-sizing: border-box;
-    margin-top: 2rem; /* Add some space above the error message */
     border: none; /* Remove the border */
     border-radius: 8px; /* Rounded corners for the container */
     color: #ff0000; /* Red text color for error messages */
@@ -401,7 +396,7 @@ html {
 }
 
 /* Tablets (Landscape) and Small Desktops */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   body,
   html {
     font-size: 14px; /* Default font size for tablets and small desktops */
@@ -412,7 +407,11 @@ html {
     border-width: 5px; /* Default border size */
   }
   .alert{
-    top:85%
+    top:85%;
+    left:5%;
+  }
+  .alert-message-icon-div{
+    width:35%;
   }
   .logo {
     max-width: 35rem;  /* Increase logo size for tablets and small desktops */
@@ -424,7 +423,7 @@ html {
 }
 
 /* Desktops and Larger Screens */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   body,
   html {
     font-size: 16px; /* Larger font size for bigger screens */
@@ -435,8 +434,12 @@ html {
     border-width: 5px; /* Default border size for larger screens */
   }
 
+.alert-message-icon-div{
+    width:35%;
+  }
   .alert{
-    top:90%
+    top:92%;
+    left:5%;
   }
 
   .logo {
@@ -461,9 +464,10 @@ html {
   }
 
   .alert{
-    top:90%;
+    top:92%;
     
   }
+
   .login-page-logo {
     top: 4rem;               /* Margin from the top */
  
@@ -478,6 +482,13 @@ html {
   }
 }
 
+@media (min-width: 2560px) {
+  .alert{
+    top:72%;
+    
+  }
+}
+
 /* Font Variations */
 .inter-light {
   font-weight: 100;
@@ -489,4 +500,29 @@ html {
 
 .inter-bold {
   font-weight: 700;
+}
+
+
+
+/* Regular submit button styling */
+.submit-btn {
+  background-color: #0046FF; /* Regular color */
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Disabled state styling */
+.submit-btn.disabled {
+  background-color:#0046FF; /* Disabled color */
+  cursor: not-allowed;
+  opacity: 0.3; /* Optional: make it slightly transparent to indicate it's disabled */
+
+}
+
+/* Additional styling for when the button is not disabled */
+.submit-btn:not(.disabled):hover {
+  background-color: #0056b3; /* Darker shade for hover */
 }

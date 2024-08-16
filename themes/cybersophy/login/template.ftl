@@ -39,13 +39,15 @@
           color: #FF0000;
           font-family: 'Inter', sans-serif;
           font-size: 1rem;
-          padding: 10px;
+          <#--  padding: 10px;  -->
           <#--  background-color: #FCE4E4;  -->
           <#--  border: 1px solid #FF4B55;  -->
           border-radius: 4px;
           margin: 10px 0;
           position: relative;
           left: 12%;
+
+          
       }
       .error-icon {
           width: 20px;
@@ -56,7 +58,7 @@
         /* Media Queries for different screen sizes */
     @media (max-width: 1200px) {
         .error-message {
-            left: 60%;
+            left: 65%;
             transform: translateX(-60%);
         }
     }
@@ -96,6 +98,14 @@
                     <img src="${url.resourcesPath}/img/erroragain.svg" class="error-icon" alt="Error icon"/>
                     <span>Invalid username or password. Try again</span>
                 </div>`;
+
+             // Hide the error message after 5 seconds (5000 milliseconds)
+            setTimeout(function() {
+                var errorMsg = document.querySelector('.error-message');
+                if (errorMsg) {
+                    errorMsg.style.display = 'none';
+                }
+            }, 5000);
         }
 
         var successElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-success");
@@ -106,6 +116,15 @@
 
                     You should receive an email shortly with further instructions.
                 </div>`;
+
+
+               // Hide the error message after 5 seconds (5000 milliseconds)
+            setTimeout(function() {
+                var successMsg = document.querySelector('.success-message');
+                if (successMsg) {
+                    successMsg.style.display = 'none';
+                }
+            }, 5000);
         }
 
         
@@ -143,7 +162,7 @@
 		
         <#if displayMessage && message?has_content>
           <div class="alert alert-message-icon-div alert-${message.type}">
-            <img src="${url.resourcesPath}/img/erroragain.svg" class="error-msg-icon" alt="img"/>
+            <#--  <img src="${url.resourcesPath}/img/erroragain.svg" class="error-msg-icon" alt="img"/>  -->
             <span class="message-text">${message.summary?no_esc}</span>
           </div>
         </#if>

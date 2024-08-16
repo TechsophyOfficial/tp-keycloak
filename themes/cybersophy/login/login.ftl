@@ -1,6 +1,8 @@
 <#import "template.ftl" as layout>
 
-<@layout.registrationLayout displayInfo=social.displayInfo; section>
+<#--  <@layout.registrationLayout displayInfo=social.displayInfo; section>  -->
+
+<@layout.registrationLayout displayInfo=social.displayInfo displayMessage=true; section>
 
 
     <#if section == "header">
@@ -45,21 +47,17 @@
                     </#if>
                 </div>
 
-                <!-- reCAPTCHA Widget -->
+                            <!-- reCAPTCHA Widget -->
                 <#if properties.recaptchaRequired?boolean>
-                    <div class="recaptcha" id="kc-captcha">
-                        <div class="g-recaptcha" data-sitekey="${properties.recaptchaSiteKey}" data-callback="recaptchaCallback"></div>
-                    </div>
+                <div class="recaptcha" id="kc-captcha">
+                    <div class="g-recaptcha" data-sitekey="${properties.recaptchaSiteKey}" data-callback="recaptchaCallback"></div>
+                </div>
                 </#if>
 
                 <!-- Submit Button -->
                 <input class="submit-btn" type="submit" value="Sign in" tabindex="3">
 
-                <!-- Error Message Container -->
-                <div id="error-message" class=" alert alert-message-icon-div" style="display: none;">
-                    <img src="${url.resourcesPath}/img/erroragain.svg" class="error-msg-icon" alt="img"/>
-                    <span class="message-text">An error occurred. Please try again.</span>
-                </div>
+               
 
             </form>
 
@@ -75,30 +73,34 @@
 
 </@layout.registrationLayout>
 
-<!-- JavaScript for reCAPTCHA Verification and Error Handling -->
 <script>
     var recaptchaResponse = "";
     var recaptchaRequired = ${properties.recaptchaRequired?string};
+    var submitButton = document.querySelector('.submit-btn');
+
+    // Initially disable the submit button and apply the disabled color
+    submitButton.disabled = true;
+    submitButton.classList.add('disabled');
+
 
     function recaptchaCallback(response) {
         recaptchaResponse = response;
+
+        // Enable the submit button when reCAPTCHA is completed
+        if (recaptchaResponse !== "") {
+            submitButton.disabled = false;
+            submitButton.classList.remove('disabled');
+        }
     }
 
     function verifyRecaptcha() {
         if (recaptchaRequired) {
             if (recaptchaResponse === "") {
-                showError("Please complete the reCAPTCHA");
+                showError("recaptcha", "Please complete the reCAPTCHA");
                 return false; // Prevent form submission if reCAPTCHA is not completed
             }
         }
         return true; // Allow form submission
-    }
-
-    function showError(message) {
-        var errorMessageElement = document.getElementById('error-message');
-        var messageText = errorMessageElement.querySelector('.message-text');
-        messageText.textContent = message; // Set the error message
-        errorMessageElement.style.display = 'flex'; // Display the error message
     }
 
     function togglePasswordVisibility() {
@@ -113,4 +115,6 @@
             toggleIcon.src = '${url.resourcesPath}/img/eye-close.svg'; // Path to eye-close icon
         }
     }
+
+   
 </script>
