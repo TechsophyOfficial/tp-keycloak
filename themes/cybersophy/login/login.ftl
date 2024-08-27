@@ -86,9 +86,10 @@
     var submitButton = document.querySelector('.submit-btn');
  
     // Initially disable the submit button and apply the disabled color
-    submitButton.disabled = true;
-    submitButton.classList.add('disabled');
- 
+    if(recaptchaRequired){
+        submitButton.disabled = true;
+        submitButton.classList.add('disabled');
+    }
  
     function recaptchaCallback(response) {
         recaptchaResponse = response;
@@ -129,13 +130,16 @@
         // Get the alert message content
         var alertMessageElement = document.getElementById('alert-message');
         var errorMessageElement = document.getElementById('display-error-message');
- 
-        if (alertMessageElement && errorMessageElement) {
+        var messageEl = document.getElementById("message-text")
+
+        if (messageEl && errorMessageElement) {
             // Move the content from the alert div to the p element
-            errorMessageElement.innerHTML = alertMessageElement.innerHTML;
- 
-            // Optionally, hide the original alert div
+            errorMessageElement.innerHTML = messageEl.innerHTML;
+            errorMessageElement.classList = messageEl.classList
+            
             alertMessageElement.style.display = 'none';
+
+            // Optionally, hide the original alert div
         }
     });
  

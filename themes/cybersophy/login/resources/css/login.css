@@ -31,7 +31,7 @@ a {
   align-items: center; /* Center items horizontally */
   justify-content: center;
   overflow: hidden;        /* Ensure no overflow outside the container */
- }
+}
  
 .container {
   position: relative;
@@ -118,7 +118,7 @@ font-size:1.4rem;
   background: linear-gradient(358.9deg, #0046FF -6.03%, #0095FF 144.98%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+  width: 100%;
 }
  
  
@@ -150,7 +150,8 @@ font-size:1.4rem;
   width: 60%;height:100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 2rem;
   box-sizing: border-box;
@@ -713,7 +714,7 @@ font-size:1.4rem;
   }
   .recaptcha{
     transform: scale(1.5);
-    margin-left: 250px;
+    margin-left: 475px;
     margin-bottom: 20px;
   }
   .forgot-password-form-title {
@@ -823,7 +824,7 @@ font-size:1.4rem;
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .recaptcha{
     transform: scale(0.9);
-    margin-left: -20px;
+    margin-left: -28px;
   }
   .input-field {
     height: 2.5rem;
@@ -881,7 +882,7 @@ font-size:1.4rem;
   }
   .recaptcha{
     transform: scale(0.8);
-    margin-left: -35px;
+    margin-left: -60px;
   }
   #kc-passwd-update-form {
     transform: scale(0.8);
@@ -899,6 +900,17 @@ font-size:1.4rem;
   #input-error-password-confirm {
     font-size: 15px;
   }
+  .error-message {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+  .error-icon {
+    width: 16px;
+    height: 17px;
+  }
+  .success-message {
+    font-size: 0.77rem;
+  }
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
@@ -907,7 +919,7 @@ font-size:1.4rem;
   }
   .recaptcha{
     transform: scale(0.8);
-    margin-left: -35px;
+    margin-left: -55px;
   }
   #password-new {
     height: 2.5rem;
@@ -928,7 +940,18 @@ font-size:1.4rem;
   }
   #kc-passwd-update-form {
     width: 65%;
-}
+  }
+  .error-message {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+  .error-icon {
+    width: 16px;
+    height: 17px;
+  }
+  .success-message {
+    padding: 5px;
+  }
 }
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
@@ -937,7 +960,7 @@ font-size:1.4rem;
   }
   .recaptcha{
     transform: scale(0.8);
-    margin-left: -28px;
+    margin-left: -50px;
   }
   .font-text-blue {
     padding-left: 5px;
@@ -961,7 +984,18 @@ font-size:1.4rem;
   }
   #kc-passwd-update-form {
     width: 65%;
-}
+  }
+  .success-message {
+    padding: 5px;
+  }
+  .error-message {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+  .error-icon {
+    width: 16px;
+    height: 17px;
+  }
 }
 
 @media screen and (min-width: 260px) and (max-width: 320px) {
@@ -993,5 +1027,16 @@ font-size:1.4rem;
   }
   #kc-passwd-update-form {
     width: 65%;
-}
+  }
+  .error-message {
+    font-size: 0.85rem;
+    padding: 5px;
+  }
+  .error-icon {
+    width: 14px;
+    height: 18px;
+  }
+  .success-message {
+    padding: 5px;
+  }
 }

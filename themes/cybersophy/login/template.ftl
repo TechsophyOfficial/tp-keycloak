@@ -15,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
        .success-message {
-            display: flex;
-            align-items: center;
+            align-self: center;
             color: #4CAF50;
             font-family: 'Inter', sans-serif;
             font-size: 0.8rem;
@@ -25,7 +24,7 @@
             border: 1px solid #4CAF50;
             border-radius: 4px;
             margin-top:-2.5rem;
-            display: flex;
+            display: inline-flex;
             align-items: center;
           
         }
@@ -36,6 +35,7 @@
             flex-shrink: 0;
         }
         .warning-message{
+          align-self: center;
           font-size:0.95rem;
           color:#4CAF50;
           background-color: #E8F5E9;
@@ -43,12 +43,13 @@
           padding:0.5rem;
           border-radius: 4px;
           margin-top:1rem;
-          display:flex;
+          display: inline-flex;
           align-items:center;
           justify-content:center;
           
         }
         .error-message {
+          align-self: center;
           color: #FF0000;
           font-family: 'Inter', sans-serif;
           font-size: 1rem;
@@ -92,24 +93,24 @@
           var updatePasswordElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-warning > span");
           if (updatePasswordElement) {
               updatePasswordElement.parentNode.innerHTML = `
-                  <div class="warning-message">
+                  <div id="message-text" class="warning-message">
                       <span>You need to change your password to activate your account.</span>
                   </div>`;
  
               // Hide the error message after 5 seconds (5000 milliseconds)
-              <#--  setTimeout(function() {
+              setTimeout(function() {
                   var updatePasswordElement = document.querySelector('.warning-message');
                   if (updatePasswordElement) {
                       updatePasswordElement.style.display = 'none';
                   }
-              }, 3000);  -->
+              }, 3000);
           }
  
  
         var errorElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-error > span");
         if (errorElement) {
             errorElement.parentNode.innerHTML = `
-                <div class="error-message">
+                <div id="message-text" class="error-message">
                     <img src="${url.resourcesPath}/img/erroragain.svg" class="error-icon" alt="Error icon"/>
                     <span>Invalid username or password. Try again</span>
                 </div>`;
@@ -126,7 +127,7 @@
         var successElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-success");
         if (successElement) {
             successElement.innerHTML = `
-                <div class="success-message">
+                <div id="message-text" class="success-message">
                     <img src="${url.resourcesPath}/img/success.svg" class="error-icon" alt="Error icon"/>
  
                     You should receive an email shortly with further instructions.
@@ -177,7 +178,7 @@
         <#nested "form">
     
         <#if displayMessage && message?has_content>
-            <div id="alert-message" class="alert alert-message-icon-div alert-${message.type}">
+            <div style="display:none" id="alert-message" class="alert alert-message-icon-div alert-${message.type}">
                 <span class="message-text">${message.summary?no_esc}</span>
             </div>
         </#if>
