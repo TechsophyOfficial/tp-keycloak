@@ -62,10 +62,8 @@
  
                 <!-- Submit Button -->
                 <input class="submit-btn" type="submit" value="Sign in" tabindex="3">
-                <span class="display-alert-message" id="display-error-message"></span>
- 
-               
- 
+                <#--  <span class="display-alert-message" id="display-error-message"></span>
+   -->
             </form>
  
             <!-- Introduction Content -->

@@ -72,89 +72,67 @@
     
     </style>
     <script>
-  // Function to change the submit button value
+    // Function to change the submit button value
     document.addEventListener('DOMContentLoaded', function() {
       var button = document.querySelector("#kc-form-buttons input[type='submit']");
       if (button) {
         button.value = "Send Recovery mail";
-      } else {
-        console.error("Submit button not found!");
       }
- 
-    // update password button value
  
       var updateBtn = document.querySelector("#kc-passwd-update-form #kc-form-buttons input[type='submit']");
- 
       if(updateBtn){
-          button.value = "Reset Password";
- 
+        button.value = "Reset Password";
       }
- 
-          var updatePasswordElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-warning > span");
-          if (updatePasswordElement) {
-              updatePasswordElement.parentNode.innerHTML = `
-                  <div id="message-text" class="warning-message">
-                      <span>You need to change your password to activate your account.</span>
-                  </div>`;
- 
-              // Hide the error message after 5 seconds (5000 milliseconds)
-              setTimeout(function() {
-                  var updatePasswordElement = document.querySelector('.warning-message');
-                  if (updatePasswordElement) {
-                      updatePasswordElement.style.display = 'none';
-                  }
-              }, 3000);
-          }
- 
- 
-        var errorElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-error > span");
-        if (errorElement) {
-            errorElement.parentNode.innerHTML = `
+
+       var toBePlaced = document.getElementsByClassName("login-form-container")
+       var errorElement = document.getElementsByClassName("message-text");
+       if (errorElement[0].innerHTML === 'Invalid username or password.') {
+            var invalidEl = document.createElement("div");
+            invalidEl.innerHTML = `
+            <#if displayMessage && message?has_content>
                 <div id="message-text" class="error-message">
                     <img src="${url.resourcesPath}/img/erroragain.svg" class="error-icon" alt="Error icon"/>
-                    <span>Invalid username or password. Try again</span>
-                </div>`;
- 
-             // Hide the error message after 5 seconds (5000 milliseconds)
-            setTimeout(function() {
-                var errorMsg = document.querySelector('.error-message');
-                if (errorMsg) {
-                    errorMsg.style.display = 'none';
-                }
-            }, 3000);
+                    <p style="margin:0px">Invalid username or password. Try again</p>
+                </div>
+            </#if>`;
+            toBePlaced[0].appendChild(invalidEl)
         }
- 
-        var successElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-success");
-        if (successElement) {
-            successElement.innerHTML = `
+
+       var successElement = document.getElementsByClassName("message-text");
+        if (successElement[0].innerHTML === 'You should receive an email shortly with further instructions.') {
+            var resetEl = document.createElement("div");
+            resetEl.innerHTML = `
+            <#if displayMessage && message?has_content>
                 <div id="message-text" class="success-message">
                     <img src="${url.resourcesPath}/img/success.svg" class="error-icon" alt="Error icon"/>
- 
-                    You should receive an email shortly with further instructions.
-                </div>`;
- 
- 
-               // Hide the error message after 5 seconds (5000 milliseconds)
-            setTimeout(function() {
-                var successMsg = document.querySelector('.success-message');
-                if (successMsg) {
-                    successMsg.style.display = 'none';
-                }
-            }, 3000);
+                    <p style="margin:0px">You should receive an email shortly with further instructions.</p>
+                </div>
+            </#if>`;
+            toBePlaced[0].appendChild(resetEl)
         }
- 
+
         
- 
-    });
- 
-    document.addEventListener("DOMContentLoaded", function() {
-            var element = document.querySelector("body > div > div.login-page-quarter-circle > div:nth-child(2) > div.alert.alert-error > span.message-text");
-            if (element) {
-                element.textContent = "Invalid username or password. Try again";
-            }
-        });
- 
-  </script>
+        var updatePassword = document.getElementsByClassName("form-horizontal")
+        var updatePasswordElement = document.querySelector("message-text");
+          if (true) {
+            var updateEl = document.createElement("div");
+            updateEl.style.display = "flex";
+            updateEl.style.justifyContent = "center";
+            updateEl.style.width = "100%";
+            updateEl.innerHTML = `
+            <#if displayMessage && message?has_content>
+                  <div id="message-text" class="warning-message">
+                      <span>You need to change your password to activate your account.</span>
+                  </div>
+            </#if>`;
+            updatePassword[0].appendChild(updateEl)
+          }
+
+       
+    })
+
+    
+    </script>
     <title>
       <#nested "title">
     </title>
@@ -177,11 +155,20 @@
  
         <#nested "form">
     
-        <#if displayMessage && message?has_content>
-            <div style="display:none" id="alert-message" class="alert alert-message-icon-div alert-${message.type}">
+        <#--  <#if displayMessage && message?has_content>
+            <div id="alert-message" class="alert alert-message-icon-div alert-${message.type}">
                 <span class="message-text">${message.summary?no_esc}</span>
             </div>
-        </#if>
+        </#if>  -->
+        <#if displayMessage && message?has_content>
+					<div class="alert alert-${message.type}">
+				    <#if message.type ='success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
+						<#if message.type='warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
+						<#if message.type='error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
+						<#if message.type='info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
+						<span style="display:none" class="message-text">${message.summary?no_esc}</span>
+					</div>
+				</#if>
  
        
       </div>
