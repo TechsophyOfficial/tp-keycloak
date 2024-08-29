@@ -62,8 +62,10 @@
  
                 <!-- Submit Button -->
                 <input class="submit-btn" type="submit" value="Sign in" tabindex="3">
-                <#--  <span class="display-alert-message" id="display-error-message"></span>
-   -->
+                <span class="display-alert-message" id="display-error-message"></span>
+ 
+               
+ 
             </form>
  
             <!-- Introduction Content -->
@@ -88,6 +90,8 @@
         submitButton.disabled = true;
         submitButton.classList.add('disabled');
     }
+    
+ 
  
     function recaptchaCallback(response) {
         recaptchaResponse = response;
@@ -121,15 +125,15 @@
             toggleIcon.src = '${url.resourcesPath}/img/eye-close.svg'; // Path to eye-close icon
         }
     }
- 
- 
+
+
     // Wait until the DOM is fully loaded
     document.addEventListener("DOMContentLoaded", function() {
         // Get the alert message content
         var alertMessageElement = document.getElementById('alert-message');
         var errorMessageElement = document.getElementById('display-error-message');
         var messageEl = document.getElementById("message-text")
-
+        
         if (messageEl && errorMessageElement) {
             // Move the content from the alert div to the p element
             errorMessageElement.innerHTML = messageEl.innerHTML;

@@ -46,6 +46,7 @@ a {
   align-self: center;
 }
 
+
 .quarter-circle {
   position: absolute;
   top: 0;
@@ -104,7 +105,8 @@ a {
   color:#0046FF;
 font-size:1.4rem;
 }
- 
+
+
  
 .introducing-cyberwasp-text{
   font-weight: 300;
@@ -118,9 +120,8 @@ font-size:1.4rem;
   background: linear-gradient(358.9deg, #0046FF -6.03%, #0095FF 144.98%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  width: 100%;
 }
- 
+
  
  
 .main-container {
@@ -150,8 +151,7 @@ font-size:1.4rem;
   width: 60%;height:100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   gap: 1rem;
   padding: 2rem;
   box-sizing: border-box;
@@ -331,7 +331,7 @@ font-size:1.4rem;
   background-clip: text;  */
  
 }
-
+ 
 .form-horizontal input{
   width: 100%;
   box-sizing: border-box;
@@ -542,7 +542,7 @@ font-size:1.4rem;
 .submit-btn:not(.disabled):hover {
   background-color: #0056b3; /* Darker shade for hover */
 }
-
+ 
 @media screen and (min-width:320px) and (max-width:768px){
   .main-container{
     flex-direction: column;
@@ -697,6 +697,10 @@ font-size:1.4rem;
   :root {
     --quarter-circle-size: 6rem;
   }
+
+  .error-message{
+    font-size:0.8rem;
+  }
 }
 
 
@@ -714,7 +718,7 @@ font-size:1.4rem;
   }
   .recaptcha{
     transform: scale(1.5);
-    margin-left: 475px;
+    margin-left: 250px;
     margin-bottom: 20px;
   }
   .forgot-password-form-title {
@@ -824,7 +828,7 @@ font-size:1.4rem;
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .recaptcha{
     transform: scale(0.9);
-    margin-left: -28px;
+    margin-left: -20px;
   }
   .input-field {
     height: 2.5rem;
@@ -882,7 +886,7 @@ font-size:1.4rem;
   }
   .recaptcha{
     transform: scale(0.8);
-    margin-left: -60px;
+    margin-left: -35px;
   }
   #kc-passwd-update-form {
     transform: scale(0.8);
@@ -900,17 +904,6 @@ font-size:1.4rem;
   #input-error-password-confirm {
     font-size: 15px;
   }
-  .error-message {
-    font-size: 0.8rem;
-    padding: 5px;
-  }
-  .error-icon {
-    width: 16px;
-    height: 17px;
-  }
-  .success-message {
-    font-size: 0.77rem;
-  }
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
@@ -919,7 +912,7 @@ font-size:1.4rem;
   }
   .recaptcha{
     transform: scale(0.8);
-    margin-left: -55px;
+    margin-left: -35px;
   }
   #password-new {
     height: 2.5rem;
@@ -940,18 +933,7 @@ font-size:1.4rem;
   }
   #kc-passwd-update-form {
     width: 65%;
-  }
-  .error-message {
-    font-size: 0.8rem;
-    padding: 5px;
-  }
-  .error-icon {
-    width: 16px;
-    height: 17px;
-  }
-  .success-message {
-    padding: 5px;
-  }
+}
 }
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
@@ -960,7 +942,7 @@ font-size:1.4rem;
   }
   .recaptcha{
     transform: scale(0.8);
-    margin-left: -50px;
+    margin-left: -28px;
   }
   .font-text-blue {
     padding-left: 5px;
@@ -984,18 +966,7 @@ font-size:1.4rem;
   }
   #kc-passwd-update-form {
     width: 65%;
-  }
-  .success-message {
-    padding: 5px;
-  }
-  .error-message {
-    font-size: 0.8rem;
-    padding: 5px;
-  }
-  .error-icon {
-    width: 16px;
-    height: 17px;
-  }
+}
 }
 
 @media screen and (min-width: 260px) and (max-width: 320px) {
@@ -1027,16 +998,5 @@ font-size:1.4rem;
   }
   #kc-passwd-update-form {
     width: 65%;
-  }
-  .error-message {
-    font-size: 0.85rem;
-    padding: 5px;
-  }
-  .error-icon {
-    width: 14px;
-    height: 18px;
-  }
-  .success-message {
-    padding: 5px;
-  }
+}
 }

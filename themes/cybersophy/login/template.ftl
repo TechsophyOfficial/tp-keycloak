@@ -72,67 +72,168 @@
     
     </style>
     <script>
-    // Function to change the submit button value
+  // Function to change the submit button value
     document.addEventListener('DOMContentLoaded', function() {
       var button = document.querySelector("#kc-form-buttons input[type='submit']");
+      var usernameInput = document.getElementById("username").value.trim();
+      var inputErrorEl = document.getElementById("input-error-username");
+
       if (button) {
         button.value = "Send Recovery mail";
+        // Add event listener for button click
+        button.addEventListener("click", function(event) {
+            var usernameValue = usernameInput.value.trim();
+
+            if (usernameValue === "") {
+                event.preventDefault(); // Prevent form submission
+                inputErrorEl.style.display = "block";
+                inputErrorEl.innerText = "Please specify username or email.";
+
+                // Hide the error message after 3 seconds (3000 milliseconds)
+                setTimeout(function() {
+                    inputErrorEl.style.display = 'none';
+                }, 3000);
+            }
+        });
+
+      } else {
+        console.error("Submit button not found!");
       }
+    
+      if (usernameInput === "" && button) {
+          event.preventDefault(); // Prevent form submission
+          inputErrorEl.style.display = "block";
+          inputErrorEl.innerText = "Please specify username.";
+           // Hide the error message after 3 seconds (3000 milliseconds)
+          setTimeout(function() {
+              if (inputErrorEl) {
+                  inputErrorEl.style.display = 'none';
+              }
+          }, 3000);
+      }     
+ 
+    // update password button value
  
       var updateBtn = document.querySelector("#kc-passwd-update-form #kc-form-buttons input[type='submit']");
+ 
       if(updateBtn){
-        button.value = "Reset Password";
+          button.value = "Reset Password";
+ 
       }
 
-       var toBePlaced = document.getElementsByClassName("login-form-container")
-       var errorElement = document.getElementsByClassName("message-text");
-       if (errorElement[0].innerHTML === 'Invalid username or password.') {
-            var invalidEl = document.createElement("div");
-            invalidEl.innerHTML = `
-            <#if displayMessage && message?has_content>
-                <div id="message-text" class="error-message">
-                    <img src="${url.resourcesPath}/img/erroragain.svg" class="error-icon" alt="Error icon"/>
-                    <p style="margin:0px">Invalid username or password. Try again</p>
-                </div>
-            </#if>`;
-            toBePlaced[0].appendChild(invalidEl)
+        updateBtn.addEventListener("click", function(event) {
+        var newPasswordEl = document.getElementById("password-new");
+        var confirmPasswordEl = document.getElementById("password-confirm");
+
+        var newPasswordErrorEl = document.getElementById("input-error-password");
+        var confirmPasswordErrorEl = document.getElementById("input-error-password-confirm");
+
+        // Clear previous error messages
+        newPasswordErrorEl.innerText = "";
+        confirmPasswordErrorEl.innerText = "";
+
+        var newPassword = newPasswordEl.value.trim();
+        var confirmPassword = confirmPasswordEl.value.trim();
+
+        var hasError = false;
+
+        // Check if the new password is empty
+        if (newPassword === "") {
+            newPasswordErrorEl.innerText = "Please enter a new password.";
+            newPasswordErrorEl.style.display = "block";
+            hasError = true;
         }
 
-       var successElement = document.getElementsByClassName("message-text");
-        if (successElement[0].innerHTML === 'You should receive an email shortly with further instructions.') {
-            var resetEl = document.createElement("div");
-            resetEl.innerHTML = `
-            <#if displayMessage && message?has_content>
-                <div id="message-text" class="success-message">
-                    <img src="${url.resourcesPath}/img/success.svg" class="error-icon" alt="Error icon"/>
-                    <p style="margin:0px">You should receive an email shortly with further instructions.</p>
-                </div>
-            </#if>`;
-            toBePlaced[0].appendChild(resetEl)
+        // Check if the passwords do not match
+        if (newPassword !== confirmPassword) {
+            confirmPasswordErrorEl.innerText = "Passwords don't match.";
+            confirmPasswordErrorEl.style.display = "block";
+            hasError = true;
         }
 
-        
-        var updatePassword = document.getElementsByClassName("form-horizontal")
-        var updatePasswordElement = document.querySelector("message-text");
-          if (true) {
-            var updateEl = document.createElement("div");
-            updateEl.style.display = "flex";
-            updateEl.style.justifyContent = "center";
-            updateEl.style.width = "100%";
-            updateEl.innerHTML = `
-            <#if displayMessage && message?has_content>
+        // Prevent form submission if there are errors
+        if (hasError) {
+            event.preventDefault();
+        }
+
+        // Hide error messages after 3 seconds
+        setTimeout(function() {
+            if (newPasswordErrorEl) {
+                newPasswordErrorEl.style.display = 'none';
+            }
+            if (confirmPasswordErrorEl) {
+                confirmPasswordErrorEl.style.display = 'none';
+            }
+        }, 3000);
+    });
+
+          
+
+          var updatePasswordElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-warning > span");
+          if (updatePasswordElement) {
+              updatePasswordElement.parentNode.innerHTML = `
                   <div id="message-text" class="warning-message">
                       <span>You need to change your password to activate your account.</span>
-                  </div>
-            </#if>`;
-            updatePassword[0].appendChild(updateEl)
+                  </div>`;
+ 
+              // Hide the error message after 5 seconds (5000 milliseconds)
+              setTimeout(function() {
+                  var updatePasswordElement = document.querySelector('.warning-message');
+                  if (updatePasswordElement) {
+                      updatePasswordElement.style.display = 'none';
+                  }
+              }, 3000);
           }
-
-       
-    })
-
-    
-    </script>
+ 
+ 
+        var errorElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-error > span");
+        if (errorElement) {
+            errorElement.parentNode.innerHTML = `
+                <div id="message-text" class="error-message">
+                    <img src="${url.resourcesPath}/img/erroragain.svg" class="error-icon" alt="Error icon"/>
+                    <span>Invalid username or password. Try again</span>
+                </div>`;
+ 
+             // Hide the error message after 5 seconds (5000 milliseconds)
+            setTimeout(function() {
+                var errorMsg = document.querySelector('.error-message');
+                if (errorMsg) {
+                    errorMsg.style.display = 'none';
+                }
+            }, 3000);
+        }
+ 
+        var successElement = document.querySelector("body > div.login-page-container > div.alert.alert-message-icon-div.alert-success");
+        if (successElement) {
+            successElement.innerHTML = `
+                <div id="message-text" class="success-message">
+                    <img src="${url.resourcesPath}/img/success.svg" class="error-icon" alt="Error icon"/>
+ 
+                    You should receive an email shortly with further instructions.
+                </div>`;
+ 
+ 
+               // Hide the error message after 5 seconds (5000 milliseconds)
+            setTimeout(function() {
+                var successMsg = document.querySelector('.success-message');
+                if (successMsg) {
+                    successMsg.style.display = 'none';
+                }
+            }, 3000);
+        }
+ 
+        
+ 
+    });
+ 
+    document.addEventListener("DOMContentLoaded", function() {
+            var element = document.querySelector("body > div > div.login-page-quarter-circle > div:nth-child(2) > div.alert.alert-error > span.message-text");
+            if (element) {
+                element.textContent = "Invalid username or password. Try again";
+            }
+        });
+ 
+  </script>
     <title>
       <#nested "title">
     </title>
@@ -155,20 +256,11 @@
  
         <#nested "form">
     
-        <#--  <#if displayMessage && message?has_content>
-            <div id="alert-message" class="alert alert-message-icon-div alert-${message.type}">
+        <#if displayMessage && message?has_content>
+            <div style="display:none" id="alert-message" class="alert alert-message-icon-div alert-${message.type}">
                 <span class="message-text">${message.summary?no_esc}</span>
             </div>
-        </#if>  -->
-        <#if displayMessage && message?has_content>
-					<div class="alert alert-${message.type}">
-				    <#if message.type ='success'><span class="${properties.kcFeedbackSuccessIcon!}"></span></#if>
-						<#if message.type='warning'><span class="${properties.kcFeedbackWarningIcon!}"></span></#if>
-						<#if message.type='error'><span class="${properties.kcFeedbackErrorIcon!}"></span></#if>
-						<#if message.type='info'><span class="${properties.kcFeedbackInfoIcon!}"></span></#if>
-						<span style="display:none" class="message-text">${message.summary?no_esc}</span>
-					</div>
-				</#if>
+        </#if>
  
        
       </div>
