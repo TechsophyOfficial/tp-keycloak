@@ -30,7 +30,7 @@
                     <label class="${properties.kcLabelClass!}">Password</label>
                     <#--  placeholder="${msg("password")}"    -->
                     <input tabindex="2" id="passwordicon"  class="${properties.kcInputClass!}" name="password" type="password" autocomplete="off" style="position:relative;margin-bottom:-26px" />
-                    <img  id="vi" src="${url.resourcesPath}/img/eye-close.svg" class="eye-icon" onclick="togglePassword()" alt="icon"/>
+                    <img  id="vi" src="${url.resourcesPath}/img/eye-close.svg" class="eye-icon" onclick="togglePassword()" alt="icon" style="border-left:1px solid #ababab;box-sizing:border-box; padding-left:10px; width:32px" />
                 </div>
 
                 <div class="${properties.kcFormGroupClass!} ${properties.kcFormSettingClass!}">
@@ -70,7 +70,7 @@
         
         </div>
         <div class="login-page-text-header">
-            <div class="header-text-rb">Introducing Cyberwasp</div>
+            <div class="header-text-rb">Introducing CyberWasp</div>
             <p class="subHeader-text-rb">Engineered for uncompromising security,<br/> CyberWasp safeguards your digital assets with confidence.</p>
         </div>
         <#if realm.password && social.providers??>
