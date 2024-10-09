@@ -3,6 +3,7 @@ COPY themes/awgment /opt/jboss/keycloak/themes/awgment
 # COPY themes/paisaplan /opt/jboss/keycloak/themes/paisaplan
 # COPY themes/medunited /opt/jboss/keycloak/themes/medunited
 COPY themes/cyberwasp /opt/jboss/keycloak/themes/cyberwasp
+COPY themes/redCrabs /opt/jboss/keycloak/themes/redCrabs
 COPY themes/cybersophy /opt/jboss/keycloak/themes/cybersophy
 COPY themes/channel360 /opt/jboss/keycloak/themes/channel360
 COPY themes/techsophy /opt/jboss/keycloak/themes/techsophy
