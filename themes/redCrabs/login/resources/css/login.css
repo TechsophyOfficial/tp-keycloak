@@ -31,22 +31,8 @@
   text-transform: uppercase;
 }
 
-.login-logo-container {
-  margin-bottom: 2vh;
-  display: flex;
-  flex-direction: center;
-  justify-content: center;
-  align-items: center;
-}
-
 .header-container {
   margin-bottom: 2vh;
-  position: relative;
-}
-
-.login-logo {
-  text-align: center;
-  width: 80%;
 }
 
 @keyframes zoomInOut {
@@ -523,7 +509,7 @@ a.zocial {
 }
 
 .welcome {
-  background-image: url(../img/redCrabsLogin.jpg);
+  background-image: url(../img/loginBG.jpg);
   background-color: linear-gradient(180deg, #d9d9d9 0%, #090d2d 100%);
   background-size: cover;
   background-repeat: no-repeat;
@@ -965,7 +951,7 @@ form#kc-select-back-form div.login-pf-social-section {
     border-radius: 10px;
   }
   .login-pf-page {
-    background-image: url(../img/redCrabsLogin.jpg);
+    background-image: url(../img/loginBG.jpg);
     background-color: linear-gradient(180deg, #d9d9d9 0%, #090d2d 100%);
     background-size: cover;
     background-repeat: no-repeat;
@@ -985,15 +971,18 @@ form#kc-select-back-form div.login-pf-social-section {
 }
 
 @media only screen and (max-width: 1024px) {
-  .redCrabs-logo {
-    display: none;
+  .small-screen-logo {
+    /* display: none; */
+  }
+  .small-screen-logo-img {
+    width: 80px;
   }
   .application-name {
     text-align: center;
   }
 }
-@media only screen and (min-width: 1024px) {
-  .redCrabs-logo {
+@media only screen and (min-width: 1025px) {
+  .small-screen-logo {
     display: none;
   }
 }
@@ -1015,29 +1004,29 @@ form#kc-select-back-form div.login-pf-social-section {
   input[type="submit"].btn-block {
     width: 70% !important;
   }
-  .redCrabs-logo-img {
-    margin-top: -20% !important;
+  .small-screen-logo-img {
+    /* margin-top: -20% !important; */
   }
 }
 @media only screen and (min-width: 1024px) {
-  .redCrabs-logo-img {
-    margin-top: -30% !important;
+  .small-screen-logo-img {
+    /* margin-top: -40% !important; */
   }
 }
 
 @media (max-width: 767px) {
-  .redCrabs-logo-img {
-    margin-top: -30% !important;
+  .small-screen-logo-img {
+    /* margin-top: -40% !important; */
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .redCrabs-logo-img {
-    margin-top: -20% !important;
+  .small-screen-logo-img {
+    /* margin-top: -40% !important; */
   }
 }
 
-.redCrabs-logo {
+.small-screen-logo {
   text-align: center;
 }
 

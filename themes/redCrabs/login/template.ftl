@@ -39,9 +39,9 @@
 <body class="${properties.kcBodyClass!}">
 <div class="body-wrapper">
 <div class="full-height welcome">
-    <#--  <div style="height:100vh; position: relative;">
-        <img src="${url.resourcesPath}/img/emp360redCrabsLogo.png" alt="redCrabs360" style="width: 20%; position: absolute; top: 2.5%; left: 50%; transform: translateX(-50%);" />
-    </div>  -->
+    <div style="height:100vh; position: relative;">
+        <img src="${url.resourcesPath}/img/emp360redCrabsLogo.png" alt="redCrabs360" style="width: 17.5%; position: absolute; top: 2.5%; left: 50%; transform: translateX(-50%);" />
+    </div>
 </div>
 
 <div class="login-wrap">
@@ -118,8 +118,8 @@
         </#if>
       </header>
       <div id="kc-content">
-      <div class="redCrabs-logo">
-        <#--  <img src="${url.resourcesPath}/img/emp360redCrabsLogo.png" alt="redCrabs" class="redCrabs-logo-img" />  -->
+      <div class="small-screen-logo">
+        <img src="${url.resourcesPath}/img/emp360redCrabsLogo.png" alt="redCrabs" class="small-screen-logo-img" />
       </div>
         <div id="kc-content-wrapper">
 

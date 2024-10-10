@@ -18,11 +18,6 @@
     <#elseif section = "form">
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
       <div id="kc-form-wrapper" <#if realm.password && social.providers??>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
-        <div class="login-logo-container">
-            <div class="login-logo">
-                <img src="${url.resourcesPath}/img/emp360redCrabsLogo.png" alt="redCrabs360" style="width: 20%;" />
-            </div>
-        </div>
         <div class="header-container">
             <div class="application-name">  Log In</div>
         </div>
